@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Animate css -->
+    <!-- <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+  /> -->
+    <link rel="stylesheet" href="./css/animate.css">
+    <style>
+        /* Interactive Header from https://tympanus.net/Development/AnimatedHeaderBackgrounds/index.html*/
+
+        #demo-1 {
+            /*  Used to be "body {"  */
+            background: #fff;
+            color: #383a3c;
+            font-weight: 400;
+            font-size: 1em;
+            line-height: 1.25;
+            font-family: 'Raleway', Calibri, Arial, sans-serif;
+        }
+
+        .large-header {
+            position: relative;
+            width: 100%;
+            background: #333;
+            overflow: hidden;
+            background-size: cover;
+            background-position: center center;
+            z-index: 1;
+        }
+
+        #demo-1 .large-header {
+            background-image: url('../img/demo-1-bg.jpg');
+        }
+
+        #main-title {
+            position: absolute;
+            margin: 0;
+            padding: 0;
+            color: #f9f1e9;
+            text-align: center;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate3d(-50%, -50%, 0);
+            transform: translate3d(-50%, -50%, 0);
+            text-transform: uppercase;
+            font-size: 4.2em;
+            letter-spacing: 0.1em;
+        }
+
+        #main-title .thin {
+            font-weight: 200;
+            line-height: 1.5em;
+        }
+
+        #main-title .subtitle {
+            font-size: 0.3em;
+            font-weight: 150;
+        }
+
+        @media only screen and (max-width : 768px) {
+            #main-title {
+                font-size: 3em;
+            }
+        }
+
+        /* This changes all the animations globaly */
+        :root {
+            --animate-duration: 5s;
+            --animate-delay: 0.9s;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section id="interactiveHeader">
+        <!-- Interactive Header -->
+        <div id="demo-1" class="">
+            <div class="content">
+                <div id="large-header" class="large-header" style="height: 640px;">
+                    <canvas id="demo-canvas" width="360" height="640"></canvas>
+                    <h1 id="main-title" class="animate__animated animate__zoomInRight animate__slower">
+                        <span class="thick" style="font-family:'Courier New', Courier, monospace;">
+                            <span class="animate__animated animate__zoomInDown animate__delay-1s">L</span>
+                            <span class="animate__animated animate__zoomIn animate__delay-2s">a</span>
+                            <span class="animate__animated animate__zoomInUp animate__delay-3s">l</span>
+                            <span class="animate__animated animate__zoomIn animate__delay-4s">i</span>
+                            <span class="animate__animated animate__zoomInRight animate__delay-5s">t</span>
+                            <span class="animate__animated animate__zoomInDown animate__delay-4s">h</span>
+                            <br>
+                            <span class="animate__animated animate__zoomInDown animate__delay-5s">Kahatapitiya</span>
+                        </span>
+                        <br>
+                        <span class="subtitle animate__animated animate__zoomInRight animate__delay-5s animate__repeat-2"
+                            style="font-family:Verdana, Geneva, Tahoma, sans-serif">
+                            Radiographer
+                            <br>
+                            Software Engineer
+                            <br>
+                            Lecture
+                        </span>
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <script src="./js/EasePack.min.js"></script>
+    <script src="./js/TweenLite.min.js"></script>
+    <script src="./js/interactiveHeader.js"></script>
+
+</body>
+
+</html>
