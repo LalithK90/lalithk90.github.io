@@ -1,10 +1,9 @@
-body{
-    background-image: url('../img/myvision.png');
+#interactiveHeader{
+    background-image: url('../img/myVision.png');
 }
 #demo-1 {
-    /*  Used to be "body {"  */
-    background: #fff;
-    color: #383a3c;
+    background: transparent;
+    color: #000000;
     font-weight: 400;
     font-size: 1em;
     line-height: 1.25;
@@ -14,38 +13,37 @@ body{
 .large-header {
     position: relative;
     width: 100%;
-    /* background: #333; */
+    background:transparent;
     overflow: hidden;
     background-size: cover;
     background-position: center center;
     z-index: 1;
 }
 
-#demo-1 .large-header {
-    background-image: url('../img/demo-1-bg.jpg');
-}
+
 
 #main-title {
     position: absolute;
-    margin: 0;
-    padding: 0;
-    color: #f9f1e9;
+    /* margin: 0;
+    padding: 0; */
+    /* color: #f9f1e9; */
     text-align: center;
-    top: 50%;
+    top: 40%;
     left: 50%;
+    font-style: italic;
     -webkit-transform: translate3d(-50%, -50%, 0);
     transform: translate3d(-50%, -50%, 0);
     text-transform: uppercase;
-    font-size: 4.2em;
+    font-size: 3.2em;
 }
 
 #main-title .thin {
-    font-weight: 200;
+    font-weight: 800;
     line-height: 1em;
 }
 
 #main-title .subtitle {
-    font-size: 0.3em;
+    font-size: 0.5em;
     font-weight: 150;
 }
 
