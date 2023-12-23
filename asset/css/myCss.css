@@ -31,7 +31,6 @@
 
 body {
     background-color: var(--loader-bg);
-    color: aliceblue;
 }
 
 
@@ -145,16 +144,17 @@ svg text.dot {
 /* main section */
 nav {
     background: var(--loader-bg);
+    color: var(--accent-tint-90);
 }
 
 #heroSection {
     padding: 1rem 0 0 0;
-    margin-top: 1.2rem;
-    background: rgb(143, 138, 147);
+    background-color: var(--loader-bg);
+    /* background: rgb(143, 138, 147);
     background: -moz-radial-gradient(circle, rgba(143, 138, 147, 0.779171043417367) 1%, rgba(14, 5, 20, 1) 5%, rgba(27, 25, 27, 1) 8%, rgba(135, 0, 217, 0.7875744047619048) 12%, rgba(61, 30, 82, 1) 15%, rgba(3, 3, 3, 0.7735688025210083) 20%, rgba(165, 31, 246, 1) 24%, rgba(10, 8, 10, 0.8632046568627451) 29%, rgba(165, 31, 246, 1) 35%, rgba(38, 35, 40, 1) 40%, rgba(148, 12, 238, 1) 45%, rgba(16, 11, 20, 1) 50%, rgba(137, 10, 238, 1) 56%, rgba(1, 1, 1, 1) 63%, rgba(104, 12, 165, 1) 68%, rgba(65, 5, 113, 1) 74%, rgba(0, 0, 0, 0.9528405112044818) 81%, rgba(152, 4, 242, 1) 87%, rgba(0, 0, 0, 0.840795693277311) 92%);
     background: -webkit-radial-gradient(circle, rgba(143, 138, 147, 0.779171043417367) 1%, rgba(14, 5, 20, 1) 5%, rgba(27, 25, 27, 1) 8%, rgba(135, 0, 217, 0.7875744047619048) 12%, rgba(61, 30, 82, 1) 15%, rgba(3, 3, 3, 0.7735688025210083) 20%, rgba(165, 31, 246, 1) 24%, rgba(10, 8, 10, 0.8632046568627451) 29%, rgba(165, 31, 246, 1) 35%, rgba(38, 35, 40, 1) 40%, rgba(148, 12, 238, 1) 45%, rgba(16, 11, 20, 1) 50%, rgba(137, 10, 238, 1) 56%, rgba(1, 1, 1, 1) 63%, rgba(104, 12, 165, 1) 68%, rgba(65, 5, 113, 1) 74%, rgba(0, 0, 0, 0.9528405112044818) 81%, rgba(152, 4, 242, 1) 87%, rgba(0, 0, 0, 0.840795693277311) 92%);
     background: radial-gradient(circle, rgba(143, 138, 147, 0.779171043417367) 1%, rgba(14, 5, 20, 1) 5%, rgba(27, 25, 27, 1) 8%, rgba(135, 0, 217, 0.7875744047619048) 12%, rgba(61, 30, 82, 1) 15%, rgba(3, 3, 3, 0.7735688025210083) 20%, rgba(165, 31, 246, 1) 24%, rgba(10, 8, 10, 0.8632046568627451) 29%, rgba(165, 31, 246, 1) 35%, rgba(38, 35, 40, 1) 40%, rgba(148, 12, 238, 1) 45%, rgba(16, 11, 20, 1) 50%, rgba(137, 10, 238, 1) 56%, rgba(1, 1, 1, 1) 63%, rgba(104, 12, 165, 1) 68%, rgba(65, 5, 113, 1) 74%, rgba(0, 0, 0, 0.9528405112044818) 81%, rgba(152, 4, 242, 1) 87%, rgba(0, 0, 0, 0.840795693277311) 92%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#8f8a93", endColorstr="#000000", GradientType=1);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#8f8a93", endColorstr="#000000", GradientType=1); */
 
 }
 
@@ -198,6 +198,19 @@ nav {
 
     &:hover {
         transform: scale(1.2);
+        transform: perspective(3000px) rotateY(5deg);
+    }
+}
+
+/* all images in main section */
+.imge_ {
+    height: inherit;
+    transform: perspective(1500px) rotateY(15deg);
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+    transition: transform 1s ease 0s;
+
+    &:hover {
         transform: perspective(3000px) rotateY(5deg);
     }
 }
