@@ -1,60 +1,266 @@
-#interactiveHeader{
-    background-image: url('../img/myVision.png');
-}
-#demo-1 {
-    background: transparent;
-    color: #000000;
-    font-weight: 400;
-    font-size: 1em;
-    line-height: 1.25;
-    font-family: 'Raleway', Calibri, Arial, sans-serif;
-}
+:root {
+    --white: #fff;
+    --white-80: rgba(255, 255, 255, .8);
+    --loader-text-color: #f6e9fe;
+    --accent-tint-90: #EAF6F8;
 
-.large-header {
-    position: relative;
-    width: 100%;
-    background:transparent;
-    overflow: hidden;
-    background-size: cover;
-    background-position: center center;
-    z-index: 1;
-}
+    --loader-dot-color: #A51FF6;
 
+    --loader-bg: #100319;
+    --gray-base: #151618;
 
+    --gray-tint-10: #2c2d2f;
+    --gray-tint-20: #444546;
+    --gray-tint-40: #737374;
+    --gray-tint-10: #2c2d2f;
+    --gray-tint-10: #2c2d2f;
 
-#main-title {
-    position: absolute;
-    /* margin: 0;
-    padding: 0; */
-    /* color: #f9f1e9; */
-    text-align: center;
-    top: 40%;
-    left: 50%;
-    font-style: italic;
-    -webkit-transform: translate3d(-50%, -50%, 0);
-    transform: translate3d(-50%, -50%, 0);
-    text-transform: uppercase;
-    font-size: 3.2em;
+    --primary: #0B0036;
+    --primary-tint-10: #23194a;
+    --primary-tint-20: #3C335E;
+    --primary-shade-20: #09002b;
+    --secondary: #F2B279;
+
+    --white-16: rgba(255, 255, 255, .16);
+
+    --accent-base: #2FA2BD;
+    --contextual-success-base: #1FA47C;
+
+    --def-transition-duration: .2s;
 }
 
-#main-title .thin {
-    font-weight: 800;
-    line-height: 1em;
+body {
+    background-color: var(--loader-bg);
+    color: aliceblue;
 }
 
-#main-title .subtitle {
-    font-size: 0.5em;
-    font-weight: 150;
+
+/* loader related */
+.loader-container {
+    position: fixed;
+    justify-content: center;
+    inset: 0;
+    z-index: 999;
+    background-color: #151618;
+    display: grid;
+    place-content: center;
+    transition: opacity .4s ease-in-out, visibility .4s ease-in-out;
 }
 
-@media only screen and (max-width : 768px) {
-    #main-title {
-        font-size: 3em;
+.loader {
+    width: 4rem;
+    height: 4rem;
+    border: .4rem solid #A51FF6;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-radius: 50%;
+    animation: 0.8s ease infinite alternate spinner;
+}
+
+@keyframes spinner {
+    from {
+        transform: rotate(0deg) scale(1);
+    }
+
+    to {
+        transform: rotate(1turn) scale(1.2);
     }
 }
 
-/* This changes all the animations globaly */
-:root {
-    --animate-duration: 5s;
-    --animate-delay: 0.9s;
+.loader-container.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+#page-content {
+    opacity: 0;
+    transform: translate3d(0, -1rem, 0);
+    transition: opacity .6s ease-in-out, transform 0.6 ease-in-out;
+}
+
+#page-content.visible {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
+
+svg {
+    width: 20rem;
+    font-weight: 700;
+}
+
+svg text {
+    font-size: 5rem;
+    stroke-width: 2;
+}
+
+svg text.text-body {
+    stroke: var(--loader-text-color);
+    animation: 4s infinite alternate animate-stroke;
+}
+
+svg text.dot {
+    fill: var(--loader-dot-color);
+    stroke: var(--loader-dot-color);
+    animation: 4s infinite alternate animate-dot;
+}
+
+@keyframes animate-stroke {
+    0% {
+        fill: transparent;
+        stroke: var(--loader-text-color);
+        stroke-width: 3;
+        stroke-dashoffset: 25%;
+        stroke-dasharray: 0 32%;
+    }
+
+    50% {
+        fill: transparent;
+        stroke: var(--loader-text-color);
+        stroke-width: 3;
+    }
+
+    80%,
+    100% {
+        fill: var(--loader-text-color);
+        stroke: transparent;
+        stroke-width: 0;
+        stroke-dashoffset: -25%;
+        stroke-dasharray: 32% 0;
+    }
+}
+
+@keyframes animate-dot {
+
+    0%,
+    60% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* main section */
+nav {
+    background: var(--loader-bg);
+}
+
+#heroSection {
+    padding: 1rem 0 0 0;
+    margin-top: 1.2rem;
+    background: rgb(143, 138, 147);
+    background: -moz-radial-gradient(circle, rgba(143, 138, 147, 0.779171043417367) 1%, rgba(14, 5, 20, 1) 5%, rgba(27, 25, 27, 1) 8%, rgba(135, 0, 217, 0.7875744047619048) 12%, rgba(61, 30, 82, 1) 15%, rgba(3, 3, 3, 0.7735688025210083) 20%, rgba(165, 31, 246, 1) 24%, rgba(10, 8, 10, 0.8632046568627451) 29%, rgba(165, 31, 246, 1) 35%, rgba(38, 35, 40, 1) 40%, rgba(148, 12, 238, 1) 45%, rgba(16, 11, 20, 1) 50%, rgba(137, 10, 238, 1) 56%, rgba(1, 1, 1, 1) 63%, rgba(104, 12, 165, 1) 68%, rgba(65, 5, 113, 1) 74%, rgba(0, 0, 0, 0.9528405112044818) 81%, rgba(152, 4, 242, 1) 87%, rgba(0, 0, 0, 0.840795693277311) 92%);
+    background: -webkit-radial-gradient(circle, rgba(143, 138, 147, 0.779171043417367) 1%, rgba(14, 5, 20, 1) 5%, rgba(27, 25, 27, 1) 8%, rgba(135, 0, 217, 0.7875744047619048) 12%, rgba(61, 30, 82, 1) 15%, rgba(3, 3, 3, 0.7735688025210083) 20%, rgba(165, 31, 246, 1) 24%, rgba(10, 8, 10, 0.8632046568627451) 29%, rgba(165, 31, 246, 1) 35%, rgba(38, 35, 40, 1) 40%, rgba(148, 12, 238, 1) 45%, rgba(16, 11, 20, 1) 50%, rgba(137, 10, 238, 1) 56%, rgba(1, 1, 1, 1) 63%, rgba(104, 12, 165, 1) 68%, rgba(65, 5, 113, 1) 74%, rgba(0, 0, 0, 0.9528405112044818) 81%, rgba(152, 4, 242, 1) 87%, rgba(0, 0, 0, 0.840795693277311) 92%);
+    background: radial-gradient(circle, rgba(143, 138, 147, 0.779171043417367) 1%, rgba(14, 5, 20, 1) 5%, rgba(27, 25, 27, 1) 8%, rgba(135, 0, 217, 0.7875744047619048) 12%, rgba(61, 30, 82, 1) 15%, rgba(3, 3, 3, 0.7735688025210083) 20%, rgba(165, 31, 246, 1) 24%, rgba(10, 8, 10, 0.8632046568627451) 29%, rgba(165, 31, 246, 1) 35%, rgba(38, 35, 40, 1) 40%, rgba(148, 12, 238, 1) 45%, rgba(16, 11, 20, 1) 50%, rgba(137, 10, 238, 1) 56%, rgba(1, 1, 1, 1) 63%, rgba(104, 12, 165, 1) 68%, rgba(65, 5, 113, 1) 74%, rgba(0, 0, 0, 0.9528405112044818) 81%, rgba(152, 4, 242, 1) 87%, rgba(0, 0, 0, 0.840795693277311) 92%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#8f8a93", endColorstr="#000000", GradientType=1);
+
+}
+
+#image_fit {
+    height: 31.5rem;
+}
+
+#main_image {
+    height: inherit;
+    transform: perspective(1500px) rotateY(15deg);
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+    transition: transform 1s ease 0s;
+
+    &:hover {
+        transform: perspective(3000px) rotateY(5deg);
+    }
+}
+
+#h1 {
+    font-size: 5rem;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: -3.6px;
+}
+
+#h1 span {
+    color: var(--secondary);
+}
+
+/* social media icon */
+.magneto {
+    height: inherit;
+    border: none;
+    color: white;
+    background-color: transparent;
+    transform: perspective(1500px) rotateX(15deg);
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+    transition: transform 1s ease 0s;
+
+    &:hover {
+        transform: scale(1.2);
+        transform: perspective(3000px) rotateY(5deg);
+    }
+}
+
+
+
+/*X-Small devices (portrait phones, less than 576px)*/
+/*No media query for `xs` since this is the default in Bootstrap*/
+
+/*TODO: Small devices (landscape phones, 576px and up)*/
+
+@media (min-width: 576px) {}
+
+/*TODO: Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {}
+
+/*TODO: Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {
+
+    .welcome_header_block {
+        padding-left: 10.0rem;
+    }
+
+    .welcome_message_block {
+        margin-top: 150px;
+    }
+}
+
+/*TODO: X-Large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+
+    .main_slide,
+    .slider_image,
+    .what_we_do {
+        height: 100vh;
+    }
+
+    @media only screen and (max-width : 768px) {
+        #main-title {
+            font-size: 3em;
+        }
+    }
+}
+
+/* This changes all the animations global */
+
+/* lenis css */
+html.lenis {
+    height: auto;
+}
+
+.lenis.lenis-smooth {
+    scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+    overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+    pointer-events: none;
 }

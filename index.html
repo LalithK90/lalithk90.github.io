@@ -6,92 +6,269 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="apple-touch-icon" sizes="180x180" href="./asset/img/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="./asset/img//favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="./asset/img//favicon-16x16.png">
-<link rel="manifest" href="./asset/img//site.webmanifest">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <meta data-th-content="This is personal portfolio for Lalth Kahatapitiya" name="description">
+    <meta
+        data-th-content="Lalith, LalithK90, Lalith90, Lalith Kahatapitiya, Kahatapitiya, Kahatapitiya90, Kahate, Software Engineer, Lecturer, Director"
+        name="keywords">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/asset/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/asset/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/asset/img/favicon-16x16.png">
+    <link rel="manifest" href="/asset/img/site.webmanifest">
+    <!-- Reset -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
     <!-- Animate css -->
-    <link rel="stylesheet" href="./asset/css/animate.css">
-     <!--    /* Interactive Header from https://tympanus.net/Development/AnimatedHeaderBackgrounds/index.html*/ -->
-<link rel="stylesheet" href="./asset/css/myCss.css">
-<link rel="stylesheet" href="./asset/js/dropdown/css/style.css">
-<link rel="stylesheet" href="./asset/js/tether/tether.min.css">
-<link rel="stylesheet" href="./asset/js/theme/css/style.css">
+    <link rel="stylesheet" href="/asset/css/animate.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <!--    /* Interactive Header from https://tympanus.net/Development/AnimatedHeaderBackgrounds/index.html*/ -->
+    <link rel="stylesheet" href="/asset/css/myCss.css">
+
+    <!-- Bootstrap JavaScript Libraries -->
+
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script defer src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/TextPlugin.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
+    <script defer src="/asset/js/myJs.js"></script>
+
 </head>
 
 <body>
-<!-- nav bar -->
-<!-- <nav class="navbar navbar-expand-lg navbar-light bg-transparent justify-content-between fixed-top">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav">
-      <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link" href="#">Features</a>
-      <a class="nav-item nav-link" href="#">Pricing</a>
-      <a class="nav-item nav-link disabled" href="#">Disabled</a>
+    <div class="loader-container">
+        <div class="loader">
+        </div>
+        <div class="row">
+            <div class="loader-container"></div>
+            <svg viewBox="0 0 400 160">
+                <text x="50%" y="50%" dy=".32em" text-anchor="middle" class="text-body">
+                    #LalithK90
+                </text>
+                <text x="50%" y="50%" dy=".32em" dx="2.1em" text-anchor="middle" class="text-body">
+                </text>
+            </svg>
+        </div>
     </div>
-  </div>
-</nav> -->
-<!-- welcome section -->
-    <section id="interactiveHeader">
-        <!-- Interactive Header -->
-        <div id="demo-1" class="">
-            <div class="content container-fluid">
-                <div id="large-header" class="large-header" style="height: 640px;">
-                    <h1 id="main-title" class="animate__animated animate__zoomInDown animate__slower ">
-                        <span class="thick" style="font-family:'Courier New', Courier, monospace;">
-                            <span class="animate__animated animate__zoomInDown animate__delay-1s animate__repeat-1">Lalith</span>
+    <div id="page-content">
+        <!-- nav bar -->
+        <nav class="navbar navbar-expand-sm navbar-dark">
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                aria-label="Toggle navigation"></button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#" aria-current="page">Home <span
+                                class="visually-hidden">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownId">
+                            <a class="dropdown-item" href="#">Action 1</a>
+                            <a class="dropdown-item" href="#">Action 2</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- welcome section -->
+        <section class="mt-3" id="heroSection">
+            <!-- Interactive Header -->
+            <div class="container-fluid mt-3">
+                <div class="row">
+                    <div class="col-sm-7">
+                        <h1 id="h1" class="fst-italic animate__animated animate__lightSpeedInLeft animate__delay-2s">
+                            <span
+                                class=" animate__animated animate__heartBeat animate__repeat-3 animate__delay-3s">Welcome</span>
                             <br>
-                            <span class="animate__animated animate__zoomInDown animate__delay-1s animate__repeat-2">Kahatapitiya</span>
-                        </span>
-                        <br>
-                        <span class="subtitle animate__animated animate__zoomInRight animate__delay-3s animate__repeat-2"~
-                            style="font-family:Verdana, Geneva, Tahoma, sans-serif">
-                           Director | Co - Founder | Radiographer | Software Engineer | Lecturer
-                        </span>
-                    </h1>
-                    <canvas id="demo-canvas" width="360px" height="640px"></canvas>
+                            <br>
+                            I am
+                            <br>
+                            Lalith Kahatapitiya
+                            <br>
+                            <span id="typewriter"></span>
+                            <span id="cursor">|</span>
+                        </h1>
+                    </div>
+                    <div class="col-sm-5  animate__animated animate__fadeInDown animate__lightSpeedInRight"
+                        id="image_fit">
+                        <img src="/asset/img/main_image.jpeg" class="img-fluid rounded-5" id="main_image"
+                            alt="Main image" />
+                    </div>
+                </div>
+                <div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h5 class="text-center fs-1 animate__animated animate__zoomInDown animate__delay-1s ">
+                                <span
+                                    class=" animate__animated animate__zoomInDown  animate__heartBeat animate__repeat-3 animate__delay-2s ">
+                                    Thanks</span>
+                                <br>
+                                <span class=" animate__animated animate__zoomInDown"> for coming to visit my
+                                    page.</span>
+                            </h5>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="row p-sm-5">
+                                <!-- linkedin -->
+                                <div
+                                    class="col-1 col-sm-1 p-2 m-2 animate__animated animate__lightSpeedInLeft animate__delay-5s">
+                                    <a href="https://lk.linkedin.com/in/lalithk90">
+                                        <button class="magneto h1" data-bs-toggle="tooltip" data-bs-placement="top"
+                                            title="Tooltip on hover">
+                                            <i class="fa-brands fa-linkedin-in" style="color: #ffffff;"></i>
+                                        </button>
+                                    </a>
+                                </div>
+                                <!-- x -->
+                                <div
+                                    class="col-1 col-sm-1 p-2 m-2 animate__animated animate__lightSpeedInLeft animate__delay-4s">
+                                    <a href="https://twitter.com/LalithK90">
+                                        <button class="magneto  h1 ">
+                                            <i class="fa-brands fa-x-twitter" style="color: #ffffff;"></i>
+                                        </button>
+                                    </a>
+                                </div>
+                                <!-- github -->
+                                <div
+                                    class="col-1 col-sm-1 p-2 m-2 animate__animated animate__lightSpeedInLeft animate__delay-3s">
+                                    <a href="https://github.com/LalithK90">
+                                        <button class="magneto  h1 ">
+                                            <i class="fa-brands fa-github" style="color: #ffffff;"></i>
+                                        </button>
+                                    </a>
+                                </div>
+                                <!-- youtube -->
+                                <div
+                                    class="col-1 col-sm-1 p-2 m-2 animate__animated animate__lightSpeedInLeft animate__delay-2s">
+                                    <a href="https://www.youtube.com/channel/UCcK13_6OR5qpcSe-7k5Fpow">
+                                        <button class="magneto h1 ">
+                                            <i class="fa-brands fa-youtube" style="color: #ffffff;"></i>
+                                        </button>
+                                    </a>
+                                </div>
+                                <!-- stack overflow -->
+                                <div
+                                    class="col-1 col-sm-1 p-2 m-2 animate__animated animate__lightSpeedInLeft animate__delay-1s">
+                                    <a href="https://stackoverflow.com/users/6483229/lalithk90">
+                                        <button class="magneto h1 ">
+                                            <i class="fa-brands fa-stack-overflow" style="color: #ffffff;"></i>
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-<!-- about me -->
-<!-- my work -->
-<!-- academic  -->
-<!-- achievement -->
-<!-- contact me  -->
-<!-- footer -->
-<!-- <div class="container-fluid vh-100">
-<div class="row">
-    <div class="col text-center">
-    &COPY; <span id="footerYear"></span>
+        </section>
+        <section>
+            <!-- about me -->
+            <div class="container-fluid">
+                <div class="entry row">
+                    <div class="entry__meta col-sm-3">
+                        <h6>Personal Projects<span></span>Astrology</h6>
+                        <h4>Scorpio Zodiac Star Sign</h4>
+                    </div>
+                    <div class="entry__media col-sm-9">
+                        <img src="/asset/img/android-chrome-512x512.png" class="imge_">
+                    </div>
+                </div>
+                <!-- academic  -->
+                <div class="entry row">
+                    <div class="entry__meta col-sm-3">
+                        <h6>Personal Projects<span></span>Astrology</h6>
+                        <h4>Scorpio Zodiac Star Sign</h4>
+                    </div>
+                    <div class="entry__media col-sm-9">
+                        <img src="/asset/img/android-chrome-512x512.png" class="imge_">
+                    </div>
+                </div>
+                <!-- publication -->
+                <div class="entry row">
+                    <div class="entry__meta col-sm-3">
+                        <h6>Personal Projects<span></span>Astrology</h6>
+                        <h4>Scorpio Zodiac Star Sign</h4>
+                    </div>
+                    <div class="entry__media col-sm-9">
+                        <img src="/asset/img/android-chrome-512x512.png" class="imge_">
+                    </div>
+                </div>
+                <!-- my work -->
+                <div class="entry row">
+                    <div class="entry__meta col-sm-3">
+                        <h6>Personal Projects<span></span>Astrology</h6>
+                        <h4>Scorpio Zodiac Star Sign</h4>
+                    </div>
+                    <div class="entry__media col-sm-9">
+                        <img src="/asset/img/android-chrome-512x512.png" class="imge_">
+                    </div>
+                </div>
+                <!-- open source world -->
+                <div class="entry row">
+                    <div class="entry__meta col-sm-3">
+                        <h6>Personal Projects<span></span>Astrology</h6>
+                        <h4>Scorpio Zodiac Star Sign</h4>
+                    </div>
+                    <div class="entry__media col-sm-9">
+                        <img src="/asset/img/android-chrome-512x512.png" class="imge_">
+                    </div>
+                </div>
+            </div>
+            <!-- achievement -->
+            <div class="container-fluid">
+                <div class="entry row">
+                    <div class="entry__meta col-sm-3">
+                        <h6>Personal Projects<span></span>Astrology</h6>
+                        <h4>Scorpio Zodiac Star Sign</h4>
+                    </div>
+                    <div class="entry__media col-sm-9">
+                        <img src="/asset/img/android-chrome-512x512.png" class="imge_">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- contact me  -->
+        <section>
+            <!-- footer -->
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="flex-column text-center  animate__animated animate__fadeInLeft">
+                        LalithK90 &COPY; <span id="footerYear"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
-</div>
-</div> -->
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
-    <script src="./asset/js/EasePack.min.js"></script>
-    <script src="./asset/js/TweenLite.min.js"></script>
-    <script src="./asset/js/interactiveHeader.js"></script>
-    <script src="./asset/js/dropdown/js/script.min.js"></script>
-    <script src="./asset/js/formoid/formoid.min.js"></script>
-    <script src="./asset/js/jarallax/jarallax.min.js"></script>
-    <script src="./asset/js/smooth-scroll/smooth-scroll.js"></script>
-    <script src="./asset/js/social-likes/social-likes.js"></script>
-    <script src="./asset/js/tether/tether.min.js"></script>
-    <script src="./asset/js/theme/js/script.js"></script>
-    <script src="./asset/js/touch-swipe/jquery.touch-swipe.min.js"></script>
-    <script src="./asset/js/myJs.js"></script>
-
+    <script>
+        // page loader
+        const loaderContainer = document.querySelector('.loader-container');
+        const pageContent = document.querySelector('#page-content');
+        window.addEventListener('load', () => {
+            loaderContainer.classList.add('hidden');
+            pageContent.classList.add('visible');
+        });
+        let currentYear = new Date();
+        let fullYear = currentYear.getFullYear();
+        document.querySelector("#footerYear").textContent = fullYear;
+    </script>
 </body>
 
 </html>
