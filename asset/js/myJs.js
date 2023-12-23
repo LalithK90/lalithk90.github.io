@@ -44,23 +44,23 @@ cursorTimeline.to('#cursor', {
 });
 
 // to load section
-const entries = document.querySelectorAll('.entry');
-entries.forEach(entry => {
-    let entryMeta = entry.querySelector('.entry__meta');
-    let entryMedia = entry.querySelector('.entry__media');
+// const entries = document.querySelectorAll('.entry');
+// entries.forEach(entry => {
+//     let entryMeta = entry.querySelector('.entry__meta');
+//     let entryMedia = entry.querySelector('.entry__media');
 
-    let tl = gsap.timeline({
-        scrollTrigger: {
-            trigger: entry,
-            start: 'top bottom',
-            end: 'bottom 90%',
-            scrub: true,
-            // markers: true,
-        }
-    });
-    tl.fromTo(entryMeta, { xPercent: -100, opacity: 0 }, { xPercent: 0, opacity: 1 });
-    tl.fromTo(entryMedia, { xPercent: 100, opacity: 0 }, { xPercent: 0, opacity: 1 }, '<');
-});
+//     let tl = gsap.timeline({
+//         scrollTrigger: {
+//             trigger: entry,
+//             start: 'top bottom',
+//             end: 'bottom 90%',
+//             scrub: true,
+//             // markers: true,
+//         }
+//     });
+//     tl.fromTo(entryMeta, { xPercent: -100, opacity: 0 }, { xPercent: 0, opacity: 1 });
+//     tl.fromTo(entryMedia, { xPercent: 100, opacity: 0 }, { xPercent: 0, opacity: 1 }, '<');
+// });
 
 // lenis smooth scroll
 const lenis = new Lenis();
