@@ -145,6 +145,7 @@ svg text.dot {
 nav {
     background: var(--loader-bg);
     color: var(--accent-tint-90);
+    position: fixed;
 }
 
 #heroSection {
@@ -193,22 +194,37 @@ nav {
     background-color: transparent;
     transform: perspective(1500px) rotateX(15deg);
     border-radius: 50%;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+    box-shadow: rgba(249, 246, 246, 0.25) 0px 25px 50px -12px;
     transition: transform 1s ease 0s;
 
     &:hover {
-        transform: scale(1.2);
+        transform: perspective(3000px) rotateY(5deg);
+    }
+}
+
+.tech_img {
+    width: 3rem;
+    height: 3rem;
+    border: none;
+    color: white;
+    background-color: transparent;
+    transform: perspective(1500px) rotateX(15deg);
+    border-radius: 50%;
+    box-shadow: rgba(249, 246, 246, 0.25) 0px 25px 50px -12px;
+    transition: transform 1s ease 0s;
+
+    &:hover {
         transform: perspective(3000px) rotateY(5deg);
     }
 }
 
 /* all images in main section */
 .imge_ {
-    height: 10rem;
-    width: 10rem;
-    transform: perspective(1500px) rotateY(15deg);
-    border-radius: 1rem;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+    height: 8rem;
+    width: 8rem;
+    transform: perspective(1500px) rotateY(25deg);
+    border-radius: 1.5rem;
+    box-shadow: rgba(100, 15, 192, 0.25) 0px 25px 50px -12px;
     transition: transform 1s ease 0s;
 
     &:hover {
@@ -216,6 +232,27 @@ nav {
     }
 }
 
+.hoverBackgroundEntry {
+    transition: all 1s ease-in-out;
+
+    &:hover {
+        box-shadow: rgba(100, 15, 192, 0.25) 0px 25px 50px -12px;
+        transform: scale(1.1);
+        border-radius: 1.5rem;
+    }
+}
+
+@keyframes backgroundColorChange {
+
+    0%,
+    60% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
 
 
 /*X-Small devices (portrait phones, less than 576px)*/
