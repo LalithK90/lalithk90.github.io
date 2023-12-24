@@ -73,3 +73,7 @@ gsap.ticker.add((time) => {
 
 gsap.ticker.lagSmoothing(0);
 
+$(".navbar .nav-link").on("click", function () {
+    $(".navbar").find(".active").removeClass("active");
+    $(this).addClass("active");
+});

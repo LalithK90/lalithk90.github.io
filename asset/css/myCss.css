@@ -33,6 +33,11 @@ body {
     background-color: var(--loader-bg);
 }
 
+/* scroll smooth */
+html {
+    scroll-behavior: smooth;
+}
+
 
 /* loader related */
 .loader-container {
