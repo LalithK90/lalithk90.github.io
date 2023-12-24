@@ -77,3 +77,54 @@ $(".navbar .nav-link").on("click", function () {
     $(".navbar").find(".active").removeClass("active");
     $(this).addClass("active");
 });
+
+// try to safe web site form copping
+
+document.addEventListener('contextmenu', (event) => {
+    event.preventDefault();
+});
+
+
+document.addEventListener('keydown', (event) => {
+    const forbiddenKeys = [ 'F12', 'Ctrl+Shift+I', 'Ctrl+Shift+J' ];
+    if (forbiddenKeys.includes(event.key)) {
+        event.preventDefault();
+    }
+});
+
+document.addEventListener('copy', (event) => {
+    event.preventDefault();
+});
+
+
+/** TO DISABLE SCREEN CAPTURE **/
+document.addEventListener('keyup', (e) => {
+    if (e.key == 'PrintScreen') {
+        navigator.clipboard.writeText('');
+        alert('Screenshots disabled!');
+    }
+});
+
+/** TO DISABLE PRINTS WHIT CTRL+P **/
+document.addEventListener('keydown', (e) => {
+    if (e.ctrlKey && e.key == 'p') {
+        alert('This section is not allowed to print or export to PDF');
+        e.cancelBubble = true;
+        e.preventDefault();
+        e.stopImmediatePropagation();
+    }
+});
+
+/* TO DO: There are combinations that remain to be solved  --> Windows+Shift+S */
+var before = new Date().getTime();
+debugger;
+var after = new Date().getTime();
+if (after - before > 100) {
+    // User had to resume the script manually via opened dev tools
+    console.log("Developer tools are open");
+    window.location.reload();
+} else {
+    console.log("Developer tools are closed");
+}
+
+
