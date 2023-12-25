@@ -3,7 +3,7 @@
 
 
 // professions display 
-let words = [ 'Director', 'Software Engineer', 'Radiographer', 'Lecturer' ];
+let words = [ 'Software Engineer', 'Radiographer', 'Lecturer' ];
 //main timeline
 let mainTimeLine = gsap.timeline({
     repeat: -1
