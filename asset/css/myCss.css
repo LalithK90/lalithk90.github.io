@@ -263,6 +263,7 @@ nav {
         box-shadow: rgba(100, 15, 192, 0.25) 0px 25px 50px -12px;
         transform: scale(1.1);
         border-radius: 1.5rem;
+        padding: 1rem;
     }
 }
 
