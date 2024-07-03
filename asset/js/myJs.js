@@ -127,4 +127,16 @@ if (after - before > 100) {
     console.log("Developer tools are closed");
 }
 
+/* youtube link show */
+
+const dropdownToggle = document.querySelector('.dmb');
+$('.dmsec').hide();
+dropdownToggle.addEventListener('mouseenter', () => {
+    $('.dmsec').show("slow");
+});
+
+dropdownToggle.addEventListener('mouseleave', () => {
+    $('.dmsec').fadeOut(9999);
+});
+
 
