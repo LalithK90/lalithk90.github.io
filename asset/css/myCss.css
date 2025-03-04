@@ -336,3 +336,92 @@ html.lenis {
     pointer-events: none;
 }
 
+/* Mobile Responsiveness */
+.responsive-heading {
+    font-size: 5rem;
+}
+
+.social-icons-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.social-icon-wrapper {
+    margin-bottom: 0.5rem;
+}
+
+.publication-links-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Media Queries */
+@media (max-width: 992px) {
+    .responsive-heading {
+        font-size: 4rem;
+    }
+    
+    #image_fit {
+        height: auto;
+        margin-top: 2rem;
+    }
+    
+    .entry__meta, .entry__media {
+        padding: 1rem !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .responsive-heading {
+        font-size: 3rem;
+    }
+    
+    #h1 {
+        text-align: center;
+    }
+    
+    .tech_img {
+        width: 2.5rem;
+        height: 2.5rem;
+        margin: 0.25rem;
+    }
+    
+    .imge_ {
+        height: 6rem;
+        width: 6rem;
+    }
+    
+    .entry {
+        margin: 0.5rem !important;
+        padding: 1rem !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .responsive-heading {
+        font-size: 2.5rem;
+    }
+    
+    #h1 span {
+        display: block;
+    }
+    
+    .imge_ {
+        height: 5rem;
+        width: 5rem;
+    }
+    
+    .magneto {
+        transform: none;
+    }
+    
+    .magneto:hover {
+        transform: scale(1.2);
+    }
+    
+    .hoverBackgroundEntry:hover {
+        transform: scale(1.05);
+    }
+}

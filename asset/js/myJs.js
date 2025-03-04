@@ -1,6 +1,13 @@
-
-
-
+// page loader
+const loaderContainer = document.querySelector('.loader-container');
+const pageContent = document.querySelector('#page-content');
+window.addEventListener('load', () => {
+    loaderContainer.classList.add('hidden');
+    pageContent.classList.add('visible');
+});
+let currentYear = new Date();
+let fullYear = currentYear.getFullYear();
+document.querySelector("#footerYear").textContent = fullYear;
 
 // professions display 
 let words = [ 'Software Engineer', 'Radiographer', 'Lecturer' ];
@@ -29,6 +36,7 @@ words.forEach(word => {
     });
     mainTimeLine.add(textTimeline);
 });
+
 // Blinking cursor
 let cursorTimeline = gsap.timeline({
     repeat: -1,
@@ -43,24 +51,38 @@ cursorTimeline.to('#cursor', {
     delay: .81
 });
 
-// to load section
-// const entries = document.querySelectorAll('.entry');
-// entries.forEach(entry => {
-//     let entryMeta = entry.querySelector('.entry__meta');
-//     let entryMedia = entry.querySelector('.entry__media');
+// Modern Scroll Interactions
+gsap.utils.toArray(".experience-card").forEach(card => {
+  gsap.from(card, {
+    scrollTrigger: {
+      trigger: card,
+      start: "top center+=100",
+      toggleActions: "play none none reverse"
+    },
+    opacity: 0,
+    y: 50,
+    duration: 0.8
+  });
+});
 
-//     let tl = gsap.timeline({
-//         scrollTrigger: {
-//             trigger: entry,
-//             start: 'top bottom',
-//             end: 'bottom 90%',
-//             scrub: true,
-//             // markers: true,
-//         }
-//     });
-//     tl.fromTo(entryMeta, { xPercent: -100, opacity: 0 }, { xPercent: 0, opacity: 1 });
-//     tl.fromTo(entryMedia, { xPercent: 100, opacity: 0 }, { xPercent: 0, opacity: 1 }, '<');
-// });
+// Dynamic Active Section Highlight
+const sections = document.querySelectorAll('section');
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop;
+    if (scrollY >= sectionTop - 300) {
+      current = section.getAttribute('id');
+    }
+  });
+  
+  document.querySelectorAll('.nav-link').forEach(link => {
+    link.classList.remove('active');
+    if(link.getAttribute('href') === `#${current}`) {
+      link.classList.add('active');
+    }
+  });
+});
 
 // lenis smooth scroll
 const lenis = new Lenis();
@@ -78,12 +100,10 @@ $(".navbar .nav-link").on("click", function () {
     $(this).addClass("active");
 });
 
-// try to safe web site form copping
-
+// Security features remain unchanged
 document.addEventListener('contextmenu', (event) => {
     event.preventDefault();
 });
-
 
 document.addEventListener('keydown', (event) => {
     const forbiddenKeys = ['F12', 'Ctrl+Shift+I', 'Ctrl+Shift+J'];
@@ -95,7 +115,6 @@ document.addEventListener('keydown', (event) => {
 document.addEventListener('copy', (event) => {
     event.preventDefault();
 });
-
 
 /** TO DISABLE SCREEN CAPTURE **/
 document.addEventListener('keyup', (e) => {
@@ -109,9 +128,6 @@ document.addEventListener('keyup', (e) => {
 document.addEventListener('keydown', (e) => {
     if (e.ctrlKey && e.key == 'p') {
         alert('This section is not allowed to print or export to PDF');
-        e.cancelBubble = true;
-        e.preventDefault();
-        e.stopImmediatePropagation();
     }
 });
 
