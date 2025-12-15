@@ -23,14 +23,22 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
 
-    <!-- Bootstrap CSS v5.2.1 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <!-- Bootstrap CSS v5.2.1 - Deferred for performance -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" media="print"
+        onload="this.media='all'" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        media="print" onload="this.media='all'" />
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;700&family=Inter:wght@400;500;700&display=swap"
         rel="stylesheet">
 
-    <!-- Animate css -->
-    <link rel="stylesheet" href="/asset/css/animate.css">
+    <!-- Animate css - Deferred -->
+    <link rel="stylesheet" href="/asset/css/animate.css" media="print" onload="this.media='all'">
+
+    <noscript>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+        <link rel="stylesheet" href="/asset/css/animate.css">
+    </noscript>
 
     <!--    /* Interactive Header from https://tympanus.net/Development/AnimatedHeaderBackgrounds/index.html*/ -->
     <link rel="stylesheet" href="/asset/css/myCss.css">
@@ -151,7 +159,7 @@
                         <div class="row pt-sm-2 mt-sm-2 justify-content-center">
                             <!-- linkedin -->
                             <div class="col-1 p-2 mx-2 animate__animated animate__fadeIn animate__delay-1s">
-                                <a href="https://linkedin.com/in/lalithk90">
+                                <a href="https://linkedin.com/in/lalithk90" aria-label="Connect on LinkedIn">
                                     <button class="magneto h1" data-bs-toggle="tooltip" data-bs-placement="top"
                                         title="Connect on LinkedIn">
                                         <i class="fa-brands fa-linkedin-in" style="width: 40px;"></i>
@@ -160,7 +168,7 @@
                             </div>
                             <!-- github -->
                             <div class="col-1 p-2 mx-2 animate__animated animate__fadeIn animate__delay-1s">
-                                <a href="https://github.com/LalithK90">
+                                <a href="https://github.com/LalithK90" aria-label="View GitHub profile">
                                     <button class="magneto  h1 ">
                                         <i class="fa-brands fa-github" style="width: 40px;"></i>
                                     </button>
@@ -168,7 +176,7 @@
                             </div>
                             <!-- youtube -->
                             <div class="col-1 p-2 mx-2 animate__animated animate__fadeIn animate__delay-1s">
-                                <a href="https://www.youtube.com/@lalithk90">
+                                <a href="https://www.youtube.com/@lalithk90" aria-label="Watch on YouTube">
                                     <button class="magneto h1" data-bs-toggle="tooltip" data-bs-placement="top"
                                         title="Watch on YouTube">
                                         <i class="fa-brands fa-youtube" style="width: 40px;"></i>
@@ -177,7 +185,7 @@
                             </div>
                             <!-- email -->
                             <div class="col-1 p-2 mx-2 animate__animated animate__fadeIn animate__delay-1s">
-                                <a href="mailto:asakahatapitiya@gmail.com">
+                                <a href="mailto:asakahatapitiya@gmail.com" aria-label="Send me an email">
                                     <button class="magneto h1" data-bs-toggle="tooltip" data-bs-placement="top"
                                         title="Send me an email">
                                         <i class="fa-regular fa-envelope" style="width: 40px;"></i>
@@ -188,991 +196,1004 @@
                     </div>
                 </div>
             </div>
-    </div>
-    </section>
 
-    <div class="mt-5 p-2">
-        <!-- Experience -->
-        <div class="container-fluid mt-5 pt-4" id="experience">
-            <!-- header -->
-            <div class="row mb-4">
-                <div class="col-12">
-                    <h1
-                        class="text-white text-left animate__animated animate__lightSpeedInRight animate__delay-1s animate__slower">
-                        Professional Journey
-                    </h1>
-                    <p class="text-white-50">Combining healthcare expertise with software engineering skills</p>
-                </div>
-            </div>
+        </section>
 
-            <div class="row">
-                <!-- Left Column -->
-                <div class="col-md-6">
-                    <!-- Siam University - Current Position -->
-                    <div class="entry m-2 p-3 hoverBackgroundEntry">
-                        <div class="d-flex align-items-center mb-3">
-                            <img src="/asset/img/saim_university.png" class="imge_ me-3"
-                                alt="Siam University Thailand logo" loading="lazy" />
-                            <div>
-                                <h3 class="text-white mb-0">IT Specialist</h3>
-                                <h5 class="text-white">Siam University, Thailand</h5>
-                                <h6 class="text-white-50">2025 Aug - Present</h6>
-                            </div>
-                        </div>
-                        <div class="job-content">
-                            <p class="text-white-50 text-wrap">
-                                Providing comprehensive IT support and infrastructure management for academic and
-                                administrative systems at Siam University.
-                            </p>
-                            <ul class="text-white-50">
-                                <li>Managing and maintaining university IT infrastructure and systems</li>
-                                <li>Implementing technology solutions for academic and administrative operations
-                                </li>
-                                <li>Providing technical support and training to faculty and staff</li>
-                                <li>Ensuring network security and data protection across university systems</li>
-                                <li>Collaborating with international teams on digital transformation initiatives
-                                </li>
-                            </ul>
-                        </div>
+        <div class="mt-5 p-2">
+            <!-- Experience -->
+            <div class="container-fluid mt-5 pt-4" id="experience">
+                <!-- header -->
+                <div class="row mb-4">
+                    <div class="col-12">
+                        <h2
+                            class="text-white text-left animate__animated animate__lightSpeedInRight animate__delay-1s animate__slower">
+                            Professional Journey
+                        </h2>
+                        <p class="text-white-50">Combining healthcare expertise with software engineering skills</p>
                     </div>
-                    <!-- SLIATE - Past Position -->
-                    <div class="entry m-2 p-3 hoverBackgroundEntry">
-                        <div class="d-flex align-items-center mb-3">
-                            <img src="/asset/img/sltate_logo.jpg" class="imge_ me-3" alt="SLIATE Anuradhapura logo"
-                                loading="lazy" />
-                            <div>
-                                <h3 class="text-white mb-0">Visiting Lecturer</h3>
-                                <h5 class="text-white">Sri Lanka Institute of Advanced Technological Education
-                                    (SLIATE) - Anuradhapura
-                                </h5>
-                                <h6 class="text-white-50">2025 March - 2025 Jul</h6>
-                            </div>
-                        </div>
-                        <div class="job-content">
-                            <p class="text-white-50 text-wrap">
-                                Delivering specialized IT education to higher diploma students, focusing on
-                                software analysis,
-                                enterprise architecture, and business analysis at the Anuradhapura campus. My
-                                responsibilities include:
-                            </p>
-                            <ul class="text-white-50">
-                                <li>Lecturing first-year students in Software Analysis and Design (HNDIT2032),
-                                    emphasizing core principles and practical
-                                    application.</li>
-
-                                <li>Teaching second-year students in Enterprise Architecture (HNDIT4232) and
-                                    Business Analysis (HNDIT4222), focusing on
-                                    system design, frameworks, and business process modeling.</li>
-
-                                <li>Designing and assessing practical, industry-aligned assignments to develop
-                                    analytical and technical skills.</li>
-
-                                <li>Using hands-on methods like case studies, demos, and projects to improve
-                                    engagement and understanding.</li>
-
-                                <li>Providing academic mentoring and feedback to support student progress and career
-                                    readiness.</li>
-                            </ul>
-                        </div>
-                    </div>
-
                 </div>
 
-                <!-- Right Column -->
-                <div class="col-md-6">
-                    <!-- Asiri Hospital -->
-                    <div class="entry m-2 p-3 hoverBackgroundEntry">
-                        <div class="d-flex align-items-center mb-3">
-                            <img src="/asset/img/asirihospital.png" class="imge_ me-3" alt="Asiri Hospital Kandy logo"
-                                loading="lazy">
-                            <div>
-                                <h3 class="text-white mb-0">Radiographer</h3>
-                                <h5 class="text-white">Asiri Group of Hospital Kandy (PVT) Ltd</h5>
-                                <h6 class="text-white-50">2022 Feb - 2025 Jul</h6>
-                            </div>
-                        </div>
-                        <div class="job-content">
-                            <p class="text-white-50 text-wrap">
-                                Providing specialized diagnostic imaging services using state-of-the-art medical
-                                equipment, contributing to accurate diagnosis and treatment planning.
-                            </p>
-                            <ul class="text-white-50">
-                                <li>Perform digital radiography examinations with precision, producing
-                                    high-quality
-                                    diagnostic images</li>
-                                <li>Conduct specialized dental imaging including OPG and lateral cephalograms
-                                </li>
-                                <li>Execute C-RAM procedures for interventional cases across multiple
-                                    specialties
-                                </li>
-                                <li>Operate advanced CT and MRI equipment for detailed cross-sectional imaging
-                                </li>
-                                <li>Ensure exceptional patient care while maintaining efficient workflow</li>
-                            </ul>
-                            <div class="tech-stack mt-3">
-                                <h6 class="text-white">Equipment Expertise:</h6>
-                                <div class="d-flex flex-wrap">
-                                    <img src="/asset/img/philips.jpeg" alt="Philips medical equipment"
-                                        class="tech_img me-2" loading="lazy">
-                                    <img src="/asset/img/eg.png" alt="GE Healthcare equipment" class="tech_img me-2"
-                                        loading="lazy">
-                                    <img src="/asset/img/carestream.png" alt="CareStream imaging system"
-                                        class="tech_img me-2" loading="lazy">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Developers-in -->
-                    <div class="entry m-2 p-3 hoverBackgroundEntry">
-                        <div class="d-flex align-items-center mb-3">
-                            <img src="/asset/img/developers-in.png" class="imge_ me-3" alt="Developers-in company logo"
-                                loading="lazy">
-                            <div>
-                                <h3 class="text-white mb-0">Co-Founder</h3>
-                                <h5 class="text-white">Developers-in (PVT) Ltd</h5>
-                                <h6 class="text-white-50">2020 Sep - 2021 Dec</h6>
-                            </div>
-                        </div>
-                        <div class="job-content">
-                            <p class="text-white-50 text-wrap">
-                                Co-founded a software development company specializing in enterprise solutions,
-                                leading both technical and business operations.
-                            </p>
-                            <ul class="text-white-50">
-                                <li>Architected full-stack applications using Spring Framework with Thymeleaf
-                                    frontend</li>
-                                <li>Implemented strategic business initiatives across finance, HR, and marketing
-                                </li>
-                                <li>Led development teams through complete software development lifecycle</li>
-                                <li>Established agile development practices and quality assurance protocols</li>
-                            </ul>
-                            <div class="tech-stack mt-3">
-                                <h6 class="text-white">Technologies:</h6>
-                                <div class="d-flex flex-wrap">
-                                    <img src="./asset/img/java.png" alt="Java programming language"
-                                        class="tech_img me-2" loading="lazy">
-                                    <img src="./asset/img/spring.png" alt="Spring Boot framework" class="tech_img me-2"
-                                        loading="lazy">
-                                    <img src="./asset/img/thymeleaf.png" alt="Thymeleaf template engine"
-                                        class="tech_img me-2" loading="lazy">
-                                    <img src="./asset/img/react.png" alt="React JavaScript library"
-                                        class="tech_img me-2" loading="lazy">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- View More Button -->
-            <div class="row mt-4">
-                <div class="col-12 text-center">
-                    <button class="btn btn-outline-light" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#additionalExperience" aria-expanded="false"
-                        aria-controls="additionalExperience">
-                        View Additional Experience
-                    </button>
-                </div>
-            </div>
-
-            <!-- Additional Experience (Collapsed by Default) -->
-            <div class="collapse" id="additionalExperience">
-                <div class="row mt-4">
+                <div class="row">
+                    <!-- Left Column -->
                     <div class="col-md-6">
-                        <!-- W3 Campus - Past Position -->
+                        <!-- Siam University - Current Position -->
                         <div class="entry m-2 p-3 hoverBackgroundEntry">
                             <div class="d-flex align-items-center mb-3">
-                                <img src="/asset/img/w3campus.jpeg" class="imge_ me-3"
-                                    alt="World Wide Wisdom Campus logo" loading="lazy" />
+                                <img src="/asset/img/saim_university.png" class="imge_ me-3"
+                                    alt="Siam University Thailand logo" loading="lazy" />
                                 <div>
-                                    <h3 class="text-white mb-0">Visiting Lecturer</h3>
-                                    <h5 class="text-white">World Wide Wisdom Campus (PVT) Ltd</h5>
-                                    <h6 class="text-white-50">2023 Jun - 2025 Jul</h6>
+                                    <h3 class="text-white mb-0">IT Specialist</h3>
+                                    <h5 class="text-white">Siam University, Thailand</h5>
+                                    <h6 class="text-white-50">2025 Aug - Present</h6>
                                 </div>
                             </div>
                             <div class="job-content">
                                 <p class="text-white-50 text-wrap">
-                                    Leading the IT6105 Software Development Project module for the BIT Degree
-                                    Program,
-                                    providing comprehensive guidance to students throughout their project lifecycle.
-                                    My
+                                    Providing comprehensive IT support and infrastructure management for academic and
+                                    administrative systems at Siam University.
+                                </p>
+                                <ul class="text-white-50">
+                                    <li>Managing and maintaining university IT infrastructure and systems</li>
+                                    <li>Implementing technology solutions for academic and administrative operations
+                                    </li>
+                                    <li>Providing technical support and training to faculty and staff</li>
+                                    <li>Ensuring network security and data protection across university systems</li>
+                                    <li>Collaborating with international teams on digital transformation initiatives
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- SLIATE - Past Position -->
+                        <div class="entry m-2 p-3 hoverBackgroundEntry">
+                            <div class="d-flex align-items-center mb-3">
+                                <img src="/asset/img/sltate_logo.jpg" class="imge_ me-3" alt="SLIATE Anuradhapura logo"
+                                    loading="lazy" />
+                                <div>
+                                    <h3 class="text-white mb-0">Visiting Lecturer</h3>
+                                    <h5 class="text-white">Sri Lanka Institute of Advanced Technological Education
+                                        (SLIATE) - Anuradhapura
+                                    </h5>
+                                    <h6 class="text-white-50">2025 March - 2025 Jul</h6>
+                                </div>
+                            </div>
+                            <div class="job-content">
+                                <p class="text-white-50 text-wrap">
+                                    Delivering specialized IT education to higher diploma students, focusing on
+                                    software analysis,
+                                    enterprise architecture, and business analysis at the Anuradhapura campus. My
                                     responsibilities include:
                                 </p>
                                 <ul class="text-white-50">
-                                    <li>Designing curriculum that bridges theoretical concepts with practical
-                                        industry
-                                        applications</li>
-                                    <li>Mentoring students through complex software architecture decisions</li>
-                                    <li>Evaluating project deliverables with detailed technical feedback</li>
-                                    <li>Facilitating workshops on emerging technologies and methodologies</li>
+                                    <li>Lecturing first-year students in Software Analysis and Design (HNDIT2032),
+                                        emphasizing core principles and practical
+                                        application.</li>
+
+                                    <li>Teaching second-year students in Enterprise Architecture (HNDIT4232) and
+                                        Business Analysis (HNDIT4222), focusing on
+                                        system design, frameworks, and business process modeling.</li>
+
+                                    <li>Designing and assessing practical, industry-aligned assignments to develop
+                                        analytical and technical skills.</li>
+
+                                    <li>Using hands-on methods like case studies, demos, and projects to improve
+                                        engagement and understanding.</li>
+
+                                    <li>Providing academic mentoring and feedback to support student progress and career
+                                        readiness.</li>
                                 </ul>
                             </div>
                         </div>
-                        <!-- W3 Campus - Director -->
-                        <div class="entry m-2 p-3 hoverBackgroundEntry">
-                            <div class="d-flex align-items-center mb-3">
-                                <img src="/asset/img/w3campus.jpeg" class="imge_ me-3" alt="W3 campus">
-                                <div>
-                                    <h3 class="text-white mb-0">Director and Lecturer</h3>
-                                    <h5 class="text-white">World Wide Wisdom Campus (PVT) Ltd</h5>
-                                    <h6 class="text-white-50">2020 Jun - 2023 Jun</h6>
-                                </div>
-                            </div>
-                            <div class="job-content">
-                                <p class="text-white-50 text-wrap">
-                                    Served in dual capacity as both academic leader and strategic director, driving
-                                    institutional growth while maintaining educational excellence.
-                                </p>
-                                <ul class="text-white-50">
-                                    <li>Developed and implemented data-driven strategies for finance and marketing
-                                        departments</li>
-                                    <li>Coordinated the IT6105 Software Development Project module curriculum</li>
-                                    <li>Supervised student projects with focus on industry-relevant technologies
-                                    </li>
-                                    <li>Established partnerships with technology companies for student internships
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- Nawaloka Gampaha -->
-                        <div class="entry m-2 p-3 hoverBackgroundEntry">
-                            <div class="d-flex align-items-center mb-3">
-                                <img src="./asset/img/nawaloka.png" class="imge_ me-3" alt="Nawaloka">
-                                <div>
-                                    <h3 class="text-white mb-0">Radiographer</h3>
-                                    <h5 class="text-white">Nawaloka Medicare (PVT) Ltd - Gampaha</h5>
-                                    <h6 class="text-white-50">2019 Feb - 2020 Jan</h6>
-                                </div>
-                            </div>
-                            <div class="job-content">
-                                <p class="text-white-50 text-wrap">
-                                    Provided comprehensive radiographic services with focus on diagnostic
-                                    excellence
-                                    and patient care.
-                                </p>
-                                <ul class="text-white-50">
-                                    <li>Performed over 1,800 digital radiography examinations</li>
-                                    <li>Conducted specialized dental imaging procedures</li>
-                                    <li>Optimized patient workflow while maintaining quality standards</li>
-                                </ul>
-                            </div>
-                        </div>
+
                     </div>
 
+                    <!-- Right Column -->
                     <div class="col-md-6">
-                        <!-- OSRO Hospital -->
+                        <!-- Asiri Hospital -->
                         <div class="entry m-2 p-3 hoverBackgroundEntry">
                             <div class="d-flex align-items-center mb-3">
-                                <img src="./asset/img/osro.png" class="imge_ me-3" alt="OSRO Hospital">
+                                <img src="/asset/img/asirihospital.png" class="imge_ me-3"
+                                    alt="Asiri Hospital Kandy logo" loading="lazy">
                                 <div>
                                     <h3 class="text-white mb-0">Radiographer</h3>
-                                    <h5 class="text-white">OSRO Hospital (PVT) Ltd - Mawanella</h5>
-                                    <h6 class="text-white-50">2022 Feb - 2022 Sep</h6>
+                                    <h5 class="text-white">Asiri Group of Hospital Kandy (PVT) Ltd</h5>
+                                    <h6 class="text-white-50">2022 Feb - 2025 Jul</h6>
                                 </div>
                             </div>
                             <div class="job-content">
                                 <p class="text-white-50 text-wrap">
-                                    Delivered comprehensive radiographic services in a community hospital
-                                    setting,
-                                    focusing on patient-centered care and diagnostic excellence.
+                                    Providing specialized diagnostic imaging services using state-of-the-art medical
+                                    equipment, contributing to accurate diagnosis and treatment planning.
                                 </p>
                                 <ul class="text-white-50">
-                                    <li>Conducted over 800 digital radiography examinations with high precision
+                                    <li>Perform digital radiography examinations with precision, producing
+                                        high-quality
+                                        diagnostic images</li>
+                                    <li>Conduct specialized dental imaging including OPG and lateral cephalograms
                                     </li>
-                                    <li>Performed specialized dental imaging procedures providing detailed
-                                        visualization
+                                    <li>Execute C-RAM procedures for interventional cases across multiple
+                                        specialties
                                     </li>
-                                    <li>Optimized patient flow while maintaining compassionate care standards
+                                    <li>Operate advanced CT and MRI equipment for detailed cross-sectional imaging
                                     </li>
-                                    <li>Collaborated with medical practitioners to ensure diagnostic accuracy
-                                    </li>
+                                    <li>Ensure exceptional patient care while maintaining efficient workflow</li>
                                 </ul>
+                                <div class="tech-stack mt-3">
+                                    <h6 class="text-white">Equipment Expertise:</h6>
+                                    <div class="d-flex flex-wrap">
+                                        <img src="/asset/img/philips.jpeg" alt="Philips medical equipment"
+                                            class="tech_img me-2" loading="lazy">
+                                        <img src="/asset/img/eg.png" alt="GE Healthcare equipment" class="tech_img me-2"
+                                            loading="lazy">
+                                        <img src="/asset/img/carestream.png" alt="CareStream imaging system"
+                                            class="tech_img me-2" loading="lazy">
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <!-- Balasooriya Hospital -->
+                        <!-- Developers-in -->
                         <div class="entry m-2 p-3 hoverBackgroundEntry">
                             <div class="d-flex align-items-center mb-3">
-                                <img src="./asset/img/balasooriya.jpeg" class="imge_ me-3" alt="Balasooriya">
+                                <img src="/asset/img/developers-in.png" class="imge_ me-3"
+                                    alt="Developers-in company logo" loading="lazy">
                                 <div>
-                                    <h3 class="text-white mb-0">Radiographer</h3>
-                                    <h5 class="text-white">Balasooriya Hospital (PVT) Ltd</h5>
-                                    <h6 class="text-white-50">2018 Oct - 2019 Apr</h6>
+                                    <h3 class="text-white mb-0">Co-Founder</h3>
+                                    <h5 class="text-white">Developers-in (PVT) Ltd</h5>
+                                    <h6 class="text-white-50">2020 Sep - 2021 Dec</h6>
                                 </div>
                             </div>
                             <div class="job-content">
                                 <p class="text-white-50 text-wrap">
-                                    Delivered diagnostic imaging services with emphasis on technical precision
-                                    and
-                                    patient comfort.
+                                    Co-founded a software development company specializing in enterprise solutions,
+                                    leading both technical and business operations.
                                 </p>
                                 <ul class="text-white-50">
-                                    <li>Executed over 1,100 digital radiography examinations</li>
-                                    <li>Performed specialized dental imaging procedures</li>
-                                    <li>Maintained efficient patient flow while ensuring quality care</li>
+                                    <li>Architected full-stack applications using Spring Framework with Thymeleaf
+                                        frontend</li>
+                                    <li>Implemented strategic business initiatives across finance, HR, and marketing
+                                    </li>
+                                    <li>Led development teams through complete software development lifecycle</li>
+                                    <li>Established agile development practices and quality assurance protocols</li>
                                 </ul>
+                                <div class="tech-stack mt-3">
+                                    <h6 class="text-white">Technologies:</h6>
+                                    <div class="d-flex flex-wrap">
+                                        <img src="./asset/img/java.png" alt="Java programming language"
+                                            class="tech_img me-2" loading="lazy">
+                                        <img src="./asset/img/spring.png" alt="Spring Boot framework"
+                                            class="tech_img me-2" loading="lazy">
+                                        <img src="./asset/img/thymeleaf.png" alt="Thymeleaf template engine"
+                                            class="tech_img me-2" loading="lazy">
+                                        <img src="./asset/img/react.png" alt="React JavaScript library"
+                                            class="tech_img me-2" loading="lazy">
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <!-- Sri Lanka Army -->
+
+                    </div>
+                </div>
+
+                <!-- View More Button -->
+                <div class="row mt-4">
+                    <div class="col-12 text-center">
+                        <button class="btn btn-outline-light" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#additionalExperience" aria-expanded="false"
+                            aria-controls="additionalExperience">
+                            View Additional Experience
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Additional Experience (Collapsed by Default) -->
+                <div class="collapse" id="additionalExperience">
+                    <div class="row mt-4">
+                        <div class="col-md-6">
+                            <!-- W3 Campus - Past Position -->
+                            <div class="entry m-2 p-3 hoverBackgroundEntry">
+                                <div class="d-flex align-items-center mb-3">
+                                    <img src="/asset/img/w3campus.jpeg" class="imge_ me-3"
+                                        alt="World Wide Wisdom Campus logo" loading="lazy" />
+                                    <div>
+                                        <h3 class="text-white mb-0">Visiting Lecturer</h3>
+                                        <h5 class="text-white">World Wide Wisdom Campus (PVT) Ltd</h5>
+                                        <h6 class="text-white-50">2023 Jun - 2025 Jul</h6>
+                                    </div>
+                                </div>
+                                <div class="job-content">
+                                    <p class="text-white-50 text-wrap">
+                                        Leading the IT6105 Software Development Project module for the BIT Degree
+                                        Program,
+                                        providing comprehensive guidance to students throughout their project lifecycle.
+                                        My
+                                        responsibilities include:
+                                    </p>
+                                    <ul class="text-white-50">
+                                        <li>Designing curriculum that bridges theoretical concepts with practical
+                                            industry
+                                            applications</li>
+                                        <li>Mentoring students through complex software architecture decisions</li>
+                                        <li>Evaluating project deliverables with detailed technical feedback</li>
+                                        <li>Facilitating workshops on emerging technologies and methodologies</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- W3 Campus - Director -->
+                            <div class="entry m-2 p-3 hoverBackgroundEntry">
+                                <div class="d-flex align-items-center mb-3">
+                                    <img src="/asset/img/w3campus.jpeg" class="imge_ me-3" alt="W3 campus"
+                                        loading="lazy">
+                                    <div>
+                                        <h3 class="text-white mb-0">Director and Lecturer</h3>
+                                        <h5 class="text-white">World Wide Wisdom Campus (PVT) Ltd</h5>
+                                        <h6 class="text-white-50">2020 Jun - 2023 Jun</h6>
+                                    </div>
+                                </div>
+                                <div class="job-content">
+                                    <p class="text-white-50 text-wrap">
+                                        Served in dual capacity as both academic leader and strategic director, driving
+                                        institutional growth while maintaining educational excellence.
+                                    </p>
+                                    <ul class="text-white-50">
+                                        <li>Developed and implemented data-driven strategies for finance and marketing
+                                            departments</li>
+                                        <li>Coordinated the IT6105 Software Development Project module curriculum</li>
+                                        <li>Supervised student projects with focus on industry-relevant technologies
+                                        </li>
+                                        <li>Established partnerships with technology companies for student internships
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- Nawaloka Gampaha -->
+                            <div class="entry m-2 p-3 hoverBackgroundEntry">
+                                <div class="d-flex align-items-center mb-3">
+                                    <img src="./asset/img/nawaloka.png" class="imge_ me-3" alt="Nawaloka"
+                                        loading="lazy">
+                                    <div>
+                                        <h3 class="text-white mb-0">Radiographer</h3>
+                                        <h5 class="text-white">Nawaloka Medicare (PVT) Ltd - Gampaha</h5>
+                                        <h6 class="text-white-50">2019 Feb - 2020 Jan</h6>
+                                    </div>
+                                </div>
+                                <div class="job-content">
+                                    <p class="text-white-50 text-wrap">
+                                        Provided comprehensive radiographic services with focus on diagnostic
+                                        excellence
+                                        and patient care.
+                                    </p>
+                                    <ul class="text-white-50">
+                                        <li>Performed over 1,800 digital radiography examinations</li>
+                                        <li>Conducted specialized dental imaging procedures</li>
+                                        <li>Optimized patient workflow while maintaining quality standards</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <!-- OSRO Hospital -->
+                            <div class="entry m-2 p-3 hoverBackgroundEntry">
+                                <div class="d-flex align-items-center mb-3">
+                                    <img src="./asset/img/osro.png" class="imge_ me-3" alt="OSRO Hospital"
+                                        loading="lazy">
+                                    <div>
+                                        <h3 class="text-white mb-0">Radiographer</h3>
+                                        <h5 class="text-white">OSRO Hospital (PVT) Ltd - Mawanella</h5>
+                                        <h6 class="text-white-50">2022 Feb - 2022 Sep</h6>
+                                    </div>
+                                </div>
+                                <div class="job-content">
+                                    <p class="text-white-50 text-wrap">
+                                        Delivered comprehensive radiographic services in a community hospital
+                                        setting,
+                                        focusing on patient-centered care and diagnostic excellence.
+                                    </p>
+                                    <ul class="text-white-50">
+                                        <li>Conducted over 800 digital radiography examinations with high precision
+                                        </li>
+                                        <li>Performed specialized dental imaging procedures providing detailed
+                                            visualization
+                                        </li>
+                                        <li>Optimized patient flow while maintaining compassionate care standards
+                                        </li>
+                                        <li>Collaborated with medical practitioners to ensure diagnostic accuracy
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- Balasooriya Hospital -->
+                            <div class="entry m-2 p-3 hoverBackgroundEntry">
+                                <div class="d-flex align-items-center mb-3">
+                                    <img src="./asset/img/balasooriya.jpeg" class="imge_ me-3" alt="Balasooriya"
+                                        loading="lazy">
+                                    <div>
+                                        <h3 class="text-white mb-0">Radiographer</h3>
+                                        <h5 class="text-white">Balasooriya Hospital (PVT) Ltd</h5>
+                                        <h6 class="text-white-50">2018 Oct - 2019 Apr</h6>
+                                    </div>
+                                </div>
+                                <div class="job-content">
+                                    <p class="text-white-50 text-wrap">
+                                        Delivered diagnostic imaging services with emphasis on technical precision
+                                        and
+                                        patient comfort.
+                                    </p>
+                                    <ul class="text-white-50">
+                                        <li>Executed over 1,100 digital radiography examinations</li>
+                                        <li>Performed specialized dental imaging procedures</li>
+                                        <li>Maintained efficient patient flow while ensuring quality care</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- Sri Lanka Army -->
+                            <div class="entry m-2 p-3 hoverBackgroundEntry">
+                                <div class="d-flex align-items-center mb-3">
+                                    <img src="./asset/img/army.jpeg" class="imge_ me-3" alt="Sri Lanka Army"
+                                        loading="lazy">
+                                    <div>
+                                        <h3 class="text-white mb-0">Non Commissioned Officer</h3>
+                                        <h5 class="text-white">Sri Lanka Army</h5>
+                                        <h6 class="text-white-50">2009 Apr - 2016 Apr</h6>
+                                    </div>
+                                </div>
+                                <div class="job-content">
+                                    <p class="text-white-50 text-wrap">
+                                        Served with distinction in the Sri Lanka Army for seven years, developing
+                                        exceptional leadership, discipline, and medical support skills across
+                                        diverse
+                                        environments.
+                                    </p>
+                                    <ul class="text-white-50">
+                                        <li>Maintained current health knowledge and implemented preventive measures
+                                        </li>
+                                        <li>Trained personnel on vital public health skills and disease prevention
+                                        </li>
+                                        <li>Managed comprehensive healthcare documentation systems</li>
+                                        <li>Collaborated with medical officers to deliver excellent patient care
+                                        </li>
+                                        <li>Adapted to evolving medical technologies to enhance unit preparedness
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- academic  -->
+            <div class="container-fluid mt-2" id="academic">
+                <div class="row mb-4">
+                    <div class="col-12">
+                        <h2
+                            class="text-white text-left animate__animated animate__lightSpeedInRight animate__delay-1s animate__slower">
+                            Education
+                        </h2>
+                        <p class="text-white-50">Academic qualifications in technology and healthcare</p>
+                    </div>
+                </div>
+
+                <!-- Two-column layout for education -->
+                <div class="row">
+                    <!-- Left Column -->
+                    <div class="col-md-6">
+                        <!-- Master of Computer Science -->
                         <div class="entry m-2 p-3 hoverBackgroundEntry">
                             <div class="d-flex align-items-center mb-3">
-                                <img src="./asset/img/army.jpeg" class="imge_ me-3" alt="Sri Lanka Army">
+                                <img src="/asset/img/uop.jpeg" class="imge_ me-3" alt="University of Peradeniya logo"
+                                    loading="lazy">
                                 <div>
-                                    <h3 class="text-white mb-0">Non Commissioned Officer</h3>
-                                    <h5 class="text-white">Sri Lanka Army</h5>
-                                    <h6 class="text-white-50">2009 Apr - 2016 Apr</h6>
+                                    <h3 class="text-white mb-0">Master of Computer Science</h3>
+                                    <h5 class="text-white">Postgraduate Institute of Science at University of
+                                        Peradeniya
+                                    </h5>
+                                    <h6 class="text-white-50">Sep 2020</h6>
                                 </div>
                             </div>
                             <div class="job-content">
-                                <p class="text-white-50 text-wrap">
-                                    Served with distinction in the Sri Lanka Army for seven years, developing
-                                    exceptional leadership, discipline, and medical support skills across
-                                    diverse
-                                    environments.
-                                </p>
-                                <ul class="text-white-50">
-                                    <li>Maintained current health knowledge and implemented preventive measures
-                                    </li>
-                                    <li>Trained personnel on vital public health skills and disease prevention
-                                    </li>
-                                    <li>Managed comprehensive healthcare documentation systems</li>
-                                    <li>Collaborated with medical officers to deliver excellent patient care
-                                    </li>
-                                    <li>Adapted to evolving medical technologies to enhance unit preparedness
-                                    </li>
-                                </ul>
+                                <a href="https://www.pgis.lk/Academic/masters/Computer_Science.php"
+                                    class="text-white-50 text-decoration-none">
+                                    <p>Click here to see course content</p>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Bachelor of Information Technology -->
+                        <div class="entry m-2 p-3 hoverBackgroundEntry">
+                            <div class="d-flex align-items-center mb-3">
+                                <img src="/asset/img/uob.png" class="imge_ me-3"
+                                    alt="University of Colombo School of Computing logo" loading="lazy">
+                                <div>
+                                    <h3 class="text-white mb-0">Bachelor of Information Technology</h3>
+                                    <h5 class="text-white">University of Colombo School of Computing</h5>
+                                    <h6 class="text-white-50">2015-2018</h6>
+                                </div>
+                            </div>
+                            <div class="job-content">
+                                <a href="https://www.bit.lk/index.php/about-bit/"
+                                    class="text-white-50 text-decoration-none">
+                                    <p>Click here to see course content</p>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Higher Diploma in Diagnostic Radiography -->
+                        <div class="entry m-2 p-3 hoverBackgroundEntry">
+                            <div class="d-flex align-items-center mb-3">
+                                <img src="/asset/img/SLSR.png" class="imge_ me-3"
+                                    alt="Sri Lanka School of Radiography logo" loading="lazy">
+                                <div>
+                                    <h3 class="text-white mb-0">Higher Diploma in Diagnostic Radiography</h3>
+                                    <h5 class="text-white">Sri Lanka School of Radiography</h5>
+                                    <h6 class="text-white-50">2014-2016</h6>
+                                </div>
+                            </div>
+                            <div class="job-content">
+                                <a href="http://scrsl.weebly.com" class="text-white-50 text-decoration-none">
+                                    <p>Click here to see course content</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column -->
+                    <div class="col-md-6">
+                        <!-- Diploma in Business Management -->
+                        <div class="entry m-2 p-3 hoverBackgroundEntry">
+                            <div class="d-flex align-items-center mb-3">
+                                <img src="/asset/img/esoft.png" class="imge_ me-3" alt="ESOFT Metro Campus logo"
+                                    loading="lazy">
+                                <div>
+                                    <h3 class="text-white mb-0">Diploma in Business Management</h3>
+                                    <h5 class="text-white">ESOFT Metro Campus</h5>
+                                    <h6 class="text-white-50">2019-2020</h6>
+                                </div>
+                            </div>
+                            <div class="job-content">
+                                <a href="https://esoft.lk/courses/diploma-in-business-management/"
+                                    class="text-white-50 text-decoration-none">
+                                    <p>Click here to see course content</p>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Foundation of Human Resource Management -->
+                        <div class="entry m-2 p-3 hoverBackgroundEntry">
+                            <div class="d-flex align-items-center mb-3">
+                                <img src="/asset/img/cipm.png" class="imge_ me-3"
+                                    alt="Chartered Institute of Personnel Management logo" loading="lazy">
+                                <div>
+                                    <h3 class="text-white mb-0">Foundation of Human Resource Management</h3>
+                                    <h5 class="text-white">Chartered Institute of Personnel Management</h5>
+                                    <h6 class="text-white-50">2016-2016</h6>
+                                </div>
+                            </div>
+                            <div class="job-content">
+                                <a href="https://www.cipmlk.org/programmes/foundation-course-in-human-resource-management-fchrm1/"
+                                    class="text-white-50 text-decoration-none">
+                                    <p>Click here to see course content</p>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- View More Button - Keep this if you still want to show additional education -->
+                <div class="row mt-4">
+                    <div class="col-12 text-center">
+                        <button class="btn btn-outline-light" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#additionalEducation" aria-expanded="false"
+                            aria-controls="additionalEducation">
+                            View More Education
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Additional Education (Collapsed by Default) -->
+                <div class="collapse" id="additionalEducation">
+                    <!-- Online Learning -->
+                    <div class="entry m-2 p-3 hoverBackgroundEntry">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fa-solid fa-graduation-cap fa-3x text-white me-3"></i>
+                            <div>
+                                <h3 class="text-white mb-0">Online Learning & Certifications</h3>
+                            </div>
+                        </div>
+                        <div class="job-content">
+                            <p class="text-white-50 text-wrap">
+                                Continuous professional development through online platforms and certification
+                                programs.
+                            </p>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h5 class="text-white">Coursera</h5>
+                                    <div class="d-flex align-items-center mb-3">
+                                        <img src="/asset/img/courseara.png" class="imge_ me-3"
+                                            alt="Coursera online learning platform" loading="lazy">
+                                        <a href="https://www.coursera.org/learner/lalithk90"
+                                            class="text-white-50 text-decoration-none">
+                                            <p class="mb-0">View Profile & Certifications</p>
+                                        </a>
+                                    </div>
+                                    <ul class="text-white-50">
+                                        <li>Machine Learning Specialization</li>
+                                        <li>Deep Learning for Healthcare</li>
+                                        <li>Software Engineering Best Practices</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <h5 class="text-white">Cisco Networking Academy</h5>
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div data-iframe-width="160" data-iframe-height="160"
+                                            data-share-badge-id="08b26489-3866-4d32-a20d-dabe369675c2"
+                                            data-share-badge-host="https://www.credly.com"></div>
+                                        <script type="text/javascript" async
+                                            src="//cdn.credly.com/assets/utilities/embed.js"></script>
+                                    </div>
+                                    <ul class="text-white-50">
+                                        <li>CCNA: Introduction to Networks</li>
+                                        <li>Network Security Fundamentals</li>
+                                        <li>IT Essentials: PC Hardware & Software</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!-- academic  -->
-        <div class="container-fluid mt-2" id="academic">
-            <div class="row mb-4">
-                <div class="col-12">
-                    <h1
-                        class="text-white text-left animate__animated animate__lightSpeedInRight animate__delay-1s animate__slower">
-                        Education
-                    </h1>
-                    <p class="text-white-50">Academic qualifications in technology and healthcare</p>
-                </div>
-            </div>
-
-            <!-- Two-column layout for education -->
-            <div class="row">
-                <!-- Left Column -->
-                <div class="col-md-6">
-                    <!-- Master of Computer Science -->
-                    <div class="entry m-2 p-3 hoverBackgroundEntry">
-                        <div class="d-flex align-items-center mb-3">
-                            <img src="/asset/img/uop.jpeg" class="imge_ me-3" alt="University of Peradeniya logo"
-                                loading="lazy">
-                            <div>
-                                <h3 class="text-white mb-0">Master of Computer Science</h3>
-                                <h5 class="text-white">Postgraduate Institute of Science at University of
-                                    Peradeniya
-                                </h5>
-                                <h6 class="text-white-50">Sep 2020</h6>
-                            </div>
-                        </div>
-                        <div class="job-content">
-                            <a href="https://www.pgis.lk/Academic/masters/Computer_Science.php"
-                                class="text-white-50 text-decoration-none">
-                                <p>Click here to see course content</p>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Bachelor of Information Technology -->
-                    <div class="entry m-2 p-3 hoverBackgroundEntry">
-                        <div class="d-flex align-items-center mb-3">
-                            <img src="/asset/img/uob.png" class="imge_ me-3"
-                                alt="University of Colombo School of Computing logo" loading="lazy">
-                            <div>
-                                <h3 class="text-white mb-0">Bachelor of Information Technology</h3>
-                                <h5 class="text-white">University of Colombo School of Computing</h5>
-                                <h6 class="text-white-50">2015-2018</h6>
-                            </div>
-                        </div>
-                        <div class="job-content">
-                            <a href="https://www.bit.lk/index.php/about-bit/"
-                                class="text-white-50 text-decoration-none">
-                                <p>Click here to see course content</p>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Higher Diploma in Diagnostic Radiography -->
-                    <div class="entry m-2 p-3 hoverBackgroundEntry">
-                        <div class="d-flex align-items-center mb-3">
-                            <img src="/asset/img/SLSR.png" class="imge_ me-3" alt="Sri Lanka School of Radiography logo"
-                                loading="lazy">
-                            <div>
-                                <h3 class="text-white mb-0">Higher Diploma in Diagnostic Radiography</h3>
-                                <h5 class="text-white">Sri Lanka School of Radiography</h5>
-                                <h6 class="text-white-50">2014-2016</h6>
-                            </div>
-                        </div>
-                        <div class="job-content">
-                            <a href="http://scrsl.weebly.com" class="text-white-50 text-decoration-none">
-                                <p>Click here to see course content</p>
-                            </a>
-                        </div>
+            <!-- Teaching Experience Section -->
+            <div class="container-fluid mt-5 pt-5" id="teaching">
+                <div class="row mb-4">
+                    <div class="col-12">
+                        <h2
+                            class="text-white text-left animate__animated animate__lightSpeedInRight animate__delay-1s animate__slower">
+                            Teaching Experience
+                        </h2>
+                        <p class="text-white-50">Dedicated to fostering the next generation of software engineers and IT
+                            professionals</p>
                     </div>
                 </div>
 
-                <!-- Right Column -->
-                <div class="col-md-6">
-                    <!-- Diploma in Business Management -->
-                    <div class="entry m-2 p-3 hoverBackgroundEntry">
-                        <div class="d-flex align-items-center mb-3">
-                            <img src="/asset/img/esoft.png" class="imge_ me-3" alt="ESOFT Metro Campus logo"
-                                loading="lazy">
-                            <div>
-                                <h3 class="text-white mb-0">Diploma in Business Management</h3>
-                                <h5 class="text-white">ESOFT Metro Campus</h5>
-                                <h6 class="text-white-50">2019-2020</h6>
-                            </div>
-                        </div>
-                        <div class="job-content">
-                            <a href="https://esoft.lk/courses/diploma-in-business-management/"
-                                class="text-white-50 text-decoration-none">
-                                <p>Click here to see course content</p>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Foundation of Human Resource Management -->
-                    <div class="entry m-2 p-3 hoverBackgroundEntry">
-                        <div class="d-flex align-items-center mb-3">
-                            <img src="/asset/img/cipm.png" class="imge_ me-3"
-                                alt="Chartered Institute of Personnel Management logo" loading="lazy">
-                            <div>
-                                <h3 class="text-white mb-0">Foundation of Human Resource Management</h3>
-                                <h5 class="text-white">Chartered Institute of Personnel Management</h5>
-                                <h6 class="text-white-50">2016-2016</h6>
-                            </div>
-                        </div>
-                        <div class="job-content">
-                            <a href="https://www.cipmlk.org/programmes/foundation-course-in-human-resource-management-fchrm1/"
-                                class="text-white-50 text-decoration-none">
-                                <p>Click here to see course content</p>
-                            </a>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- View More Button - Keep this if you still want to show additional education -->
-            <div class="row mt-4">
-                <div class="col-12 text-center">
-                    <button class="btn btn-outline-light" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#additionalEducation" aria-expanded="false" aria-controls="additionalEducation">
-                        View More Education
-                    </button>
-                </div>
-            </div>
-
-            <!-- Additional Education (Collapsed by Default) -->
-            <div class="collapse" id="additionalEducation">
-                <!-- Online Learning -->
+                <!-- Teaching Philosophy -->
                 <div class="entry m-2 p-3 hoverBackgroundEntry">
                     <div class="d-flex align-items-center mb-3">
-                        <i class="fa-solid fa-graduation-cap fa-3x text-white me-3"></i>
+                        <i class="fa-solid fa-chalkboard-user fa-3x text-white me-3"></i>
                         <div>
-                            <h3 class="text-white mb-0">Online Learning & Certifications</h3>
+                            <h3 class="text-white mb-0">Teaching Philosophy</h3>
                         </div>
                     </div>
                     <div class="job-content">
                         <p class="text-white-50 text-wrap">
-                            Continuous professional development through online platforms and certification
-                            programs.
+                            My teaching approach combines theoretical foundations with practical industry
+                            applications, creating an engaging learning environment that prepares students for
+                            real-world challenges. I believe in fostering critical thinking and problem-solving skills
+                            through
+                            project-based learning, collaborative exercises, and continuous feedback.
                         </p>
+                        <p class="text-white-50 text-wrap">
+                            I am committed to equipping students with both technical expertise and critical thinking
+                            skills
+                            necessary to excel in their IT careers, with particular emphasis on software engineering
+                            practices
+                            and business analysis methodologies.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Course Development -->
+                <div class="entry m-2 p-3 hoverBackgroundEntry">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fa-solid fa-book-open fa-3x text-white me-3"></i>
+                        <div>
+                            <h3 class="text-white mb-0">Course Development & Instruction</h3>
+                        </div>
+                    </div>
+                    <div class="job-content">
                         <div class="row">
                             <div class="col-md-6">
-                                <h5 class="text-white">Coursera</h5>
-                                <div class="d-flex align-items-center mb-3">
-                                    <img src="/asset/img/courseara.png" class="imge_ me-3"
-                                        alt="Coursera online learning platform" loading="lazy">
-                                    <a href="https://www.coursera.org/learner/lalithk90"
-                                        class="text-white-50 text-decoration-none">
-                                        <p class="mb-0">View Profile & Certifications</p>
-                                    </a>
-                                </div>
+                                <h5 class="text-white">SLIATE Higher Diploma Courses</h5>
+                                <p class="text-white-50">
+                                    Currently teaching and developing materials for:
+                                </p>
                                 <ul class="text-white-50">
-                                    <li>Machine Learning Specialization</li>
-                                    <li>Deep Learning for Healthcare</li>
-                                    <li>Software Engineering Best Practices</li>
+                                    <li>Software Analysis and Design (HNDIT2032)</li>
+                                    <li>Enterprise Architecture (HNDIT4232)</li>
+                                    <li>Business Analysis (HNDIT4222)</li>
+                                    <li>Industry-standard modeling techniques and tools</li>
+                                    <li>Software development lifecycle methodologies</li>
                                 </ul>
                             </div>
                             <div class="col-md-6">
-                                <h5 class="text-white">Cisco Networking Academy</h5>
-                                <div class="d-flex align-items-center mb-3">
-                                    <div data-iframe-width="160" data-iframe-height="160"
-                                        data-share-badge-id="08b26489-3866-4d32-a20d-dabe369675c2"
-                                        data-share-badge-host="https://www.credly.com"></div>
-                                    <script type="text/javascript" async
-                                        src="//cdn.credly.com/assets/utilities/embed.js"></script>
-                                </div>
+                                <h5 class="text-white">Previous Course: IT6105</h5>
+                                <p class="text-white-50">
+                                    Designed and delivered curriculum for BIT degree program, covering:
+                                </p>
                                 <ul class="text-white-50">
-                                    <li>CCNA: Introduction to Networks</li>
-                                    <li>Network Security Fundamentals</li>
-                                    <li>IT Essentials: PC Hardware & Software</li>
+                                    <li>Software architecture principles and design patterns</li>
+                                    <li>Agile development methodologies and team collaboration</li>
+                                    <li>Full-stack application development with modern frameworks</li>
+                                    <li>Testing strategies and quality assurance practices</li>
+                                    <li>DevOps principles and continuous integration</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <!-- Teaching Experience Section -->
-        <div class="container-fluid mt-5 pt-5" id="teaching">
-            <div class="row mb-4">
-                <div class="col-12">
-                    <h1
-                        class="text-white text-left animate__animated animate__lightSpeedInRight animate__delay-1s animate__slower">
-                        Teaching Experience
-                    </h1>
-                    <p class="text-white-50">Dedicated to fostering the next generation of software engineers and IT
-                        professionals</p>
-                </div>
-            </div>
-
-            <!-- Teaching Philosophy -->
-            <div class="entry m-2 p-3 hoverBackgroundEntry">
-                <div class="d-flex align-items-center mb-3">
-                    <i class="fa-solid fa-chalkboard-user fa-3x text-white me-3"></i>
-                    <div>
-                        <h3 class="text-white mb-0">Teaching Philosophy</h3>
-                    </div>
-                </div>
-                <div class="job-content">
-                    <p class="text-white-50 text-wrap">
-                        My teaching approach combines theoretical foundations with practical industry
-                        applications, creating an engaging learning environment that prepares students for
-                        real-world challenges. I believe in fostering critical thinking and problem-solving skills
-                        through
-                        project-based learning, collaborative exercises, and continuous feedback.
-                    </p>
-                    <p class="text-white-50 text-wrap">
-                        I am committed to equipping students with both technical expertise and critical thinking
-                        skills
-                        necessary to excel in their IT careers, with particular emphasis on software engineering
-                        practices
-                        and business analysis methodologies.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Course Development -->
-            <div class="entry m-2 p-3 hoverBackgroundEntry">
-                <div class="d-flex align-items-center mb-3">
-                    <i class="fa-solid fa-book-open fa-3x text-white me-3"></i>
-                    <div>
-                        <h3 class="text-white mb-0">Course Development & Instruction</h3>
-                    </div>
-                </div>
-                <div class="job-content">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <h5 class="text-white">SLIATE Higher Diploma Courses</h5>
-                            <p class="text-white-50">
-                                Currently teaching and developing materials for:
-                            </p>
-                            <ul class="text-white-50">
-                                <li>Software Analysis and Design (HNDIT2032)</li>
-                                <li>Enterprise Architecture (HNDIT4232)</li>
-                                <li>Business Analysis (HNDIT4222)</li>
-                                <li>Industry-standard modeling techniques and tools</li>
-                                <li>Software development lifecycle methodologies</li>
-                            </ul>
-                        </div>
-                        <div class="col-md-6">
-                            <h5 class="text-white">Previous Course: IT6105</h5>
-                            <p class="text-white-50">
-                                Designed and delivered curriculum for BIT degree program, covering:
-                            </p>
-                            <ul class="text-white-50">
-                                <li>Software architecture principles and design patterns</li>
-                                <li>Agile development methodologies and team collaboration</li>
-                                <li>Full-stack application development with modern frameworks</li>
-                                <li>Testing strategies and quality assurance practices</li>
-                                <li>DevOps principles and continuous integration</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- publications -->
-        <div class="container-fluid mt-5 pt-5" id="publications">
-            <div class="row mb-4">
-                <div class="col-12">
-                    <h1
-                        class="text-white text-left animate__animated animate__lightSpeedInRight animate__delay-1s animate__slower">
-                        Publications & Research
-                    </h1>
-                    <p class="text-white-50">Academic contributions and research interests in software
-                        engineering</p>
-                </div>
-            </div>
-
-            <!-- Two-column layout for publications -->
-            <div class="row">
-                <!-- Combined Research Interests -->
-                <div class="col-12">
-                    <div class="entry m-2 p-3 hoverBackgroundEntry">
-                        <div class="d-flex align-items-center mb-3">
-                            <i class="fa-solid fa-microscope fa-3x text-white me-3"></i>
-                            <div>
-                                <h3 class="text-white mb-0">Research Interests</h3>
-                            </div>
-                        </div>
-                        <div class="job-content">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <h5 class="text-white">Medical Image Analysis</h5>
-                                    <ul class="text-white-50">
-                                        <li>Computer-aided diagnosis systems</li>
-                                        <li>Medical image segmentation techniques</li>
-                                        <li>Feature extraction from radiological images</li>
-                                        <li>Software solutions for diagnostic imaging</li>
-                                    </ul>
-                                </div>
-                                <div class="col-md-4">
-                                    <h5 class="text-white">AI & Deep Learning Applications</h5>
-                                    <ul class="text-white-50">
-                                        <li>Convolutional Neural Networks for image classification</li>
-                                        <li>Transfer learning in limited medical datasets</li>
-                                        <li>Explainable AI for healthcare applications</li>
-                                        <li>Deep learning model optimization techniques</li>
-                                    </ul>
-                                </div>
-                                <div class="col-md-4">
-                                    <h5 class="text-white">Agricultural Software Systems</h5>
-                                    <ul class="text-white-50">
-                                        <li>Crop disease detection through image analysis</li>
-                                        <li>AI-powered decision support systems for agriculture</li>
-                                        <li>Real-time monitoring systems for agricultural applications</li>
-                                        <li>Integration of IoT devices with agricultural platforms</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Academic Profiles -->
-            <div class="entry m-2 p-3 hoverBackgroundEntry">
-                <div class="d-flex align-items-center mb-3">
-                    <div>
-                        <h3 class="text-white mb-0">Academic Profiles</h3>
-                    </div>
-                </div>
-                <div class="job-content">
-                    <div class="row text-center">
-                        <div class="col-md-4 mb-3">
-                            <a href="https://scholar.google.com/citations?user=ojetDLIAAAAJ&hl=en"
-                                class="text-white-50 text-decoration-none">
-                                <img src="./asset/img/google-scholar.svg" class="imge_ mb-2"
-                                    alt="Google Scholar profile" loading="lazy">
-                                <h5 class="text-white">Google Scholar</h5>
-                            </a>
-                        </div>
-                        <div class="col-md-4 mb-3">
-                            <a href="https://www.researchgate.net/profile/Lalith-Kahatapitiya"
-                                class="text-white-50 text-decoration-none">
-                                <img src="./asset/img/researchget.png" class="imge_ mb-2" alt="ResearchGate profile"
-                                    loading="lazy">
-                                <h5 class="text-white">ResearchGate</h5>
-                            </a>
-                        </div>
-                        <div class="col-md-4 mb-3">
-                            <a href="https://pgis.academia.edu/LalithKahatapitiya"
-                                class="text-white-50 text-decoration-none">
-                                <img src="./asset/img/academia-edu.png" class="imge_ mb-2" alt="Academia.edu profile"
-                                    loading="lazy">
-                                <h5 class="text-white">Academia</h5>
-                            </a>
-                        </div>
-                        <div class="col-md-4 mb-3">
-                            <a href="https://orcid.org/0009-0007-3364-7811" class="text-white-50 text-decoration-none">
-                                <img src="./asset/img/orcid.png" class="imge_ mb-2" alt="ORCID researcher identifier"
-                                    loading="lazy">
-                                <h5 class="text-white">ORCID</h5>
-                            </a>
-                        </div>
-                        <div class="col-md-4 mb-3">
-                            <a href="https://osf.io/xzdms" class="text-white-50 text-decoration-none">
-                                <img src="./asset/img/osf.png" class="imge_ mb-2" alt="Open Science Framework profile"
-                                    loading="lazy">
-                                <h5 class="text-white">OSF</h5>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- membership -->
-        <div class="container-fluid mt-5 pt-5" id="membership">
-            <div class="row mb-4">
-                <div class="col-12">
-                    <h1
-                        class="text-white text-left animate__animated animate__lightSpeedInRight animate__delay-1s animate__slower">
-                        Membership & Licenses
-                    </h1>
-                    <p class="text-white-50">Professional affiliations and certifications</p>
-                </div>
-            </div>
-            <div class="entry  entry__media p-4 row">
-                <div class="col-sm-4 p-2 hoverBackgroundEntry">
-                    <div class="row">
-                        <div class="col-sm-7">
-                            <h5 class="text-white text-center">Computer Society of Sri Lanka</h5>
-                            <p class="text-white-50">Register Number : M2225</p>
-                            <a href="https://cssl.lk/" class="text-white-50 text-decoration-none h1">
-                                <p class="text-center"><i class="fa-solid fa-globe"></i>
-                                </p>
-                            </a>
-                        </div>
-                        <div class="col-sm-3">
-                            <img src="./asset/img/cssl.png" class="imge_" alt="Computer Society of Sri Lanka logo"
-                                loading="lazy">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4 p-2 hoverBackgroundEntry">
-                    <div class="row">
-                        <div class="col-sm-7">
-                            <h5 class="text-white">Sri Lanka Medical Council</h5>
-                            <p class="text-white-50">Register Number : 0697</p>
-                            <a href="https://slmc.gov.lk/en/" class="text-white-50 text-decoration-none h1">
-                                <p class="text-center"><i class="fa-solid fa-globe"></i>
-                                </p>
-                            </a>
-                        </div>
-                        <div class="col-sm-3">
-                            <img src="./asset/img/slmc.jpeg" class="imge_" alt="Sri Lanka Medical Council logo"
-                                loading="lazy">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4 p-2 hoverBackgroundEntry">
-                    <div class="row">
-                        <div class="col-sm-7">
-                            <h5 class="text-white text-center">Society of Radiological Technologist</h5>
-                            <p class="text-white-50">Register Number : 0742</p>
-                            <a href="https://www.srtsl.com/" class="text-white-50 text-decoration-none h1">
-                                <p class="text-center"><i class="fa-solid fa-globe"></i>
-                                </p>
-                            </a>
-                        </div>
-                        <div class="col-sm-3">
-                            <img src="/asset/img/slrt.jpeg" class="imge_"
-                                alt="Society of Radiological Technologist logo" loading="lazy">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- projects -->
-        <div class="container-fluid mt-5 pt-5" id="projects">
-            <div class="row mb-4">
-                <div class="col-12">
-                    <h1
-                        class="text-white text-left animate__animated animate__lightSpeedInRight animate__delay-1s animate__slower">
-                        Featured Projects
-                    </h1>
-                    <p class="text-white-50">Innovative applications with educational and research applications
-                    </p>
-                </div>
-            </div>
-            <div class="entry m-2 p-4 row">
-                <!-- LITI Project -->
-                <div class="entry__meta p-4 col-sm-6 hoverBackgroundEntry">
-                    <div class="row">
-                        <div class="col-sm-9">
-                            <h3 class="text-white">LITI - URL Shortener</h3>
-                            <p class="text-white-50">LnkTrim your URLs with the best URL shortener app. Free and
-                                pro
-                                services
-                                with customizable analytics features, link tracking, and social media
-                                optimization.
-                            </p>
-                            <div class="mt-2">
-                                <h6 class="text-white">Educational Applications:</h6>
-                                <ul class="text-white-50">
-                                    <li>Demonstrates RESTful API design principles and best practices</li>
-                                    <li>Showcases secure user authentication and authorization flows</li>
-                                    <li>Illustrates data analytics implementation and visualization techniques
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="tech-stack mt-3">
-                                <h6 class="text-white">Technologies:</h6>
-                                <div class="d-flex flex-wrap">
-                                    <span class="badge bg-secondary me-2 mb-2">Spring Boot</span>
-                                    <span class="badge bg-secondary me-2 mb-2">Hibernate</span>
-                                    <span class="badge bg-secondary me-2 mb-2">Thymeleaf</span>
-                                    <span class="badge bg-secondary me-2 mb-2">JavaMail</span>
-                                    <span class="badge bg-secondary me-2 mb-2">Bootstrap</span>
-                                    <span class="badge bg-secondary me-2 mb-2">jQuery</span>
-                                </div>
-                            </div>
-                            <div class="mt-3">
-                                <a href="https://liti.cyou/" target="_blank" class="btn btn-outline-light me-2">
-                                    <i class="fa-solid fa-globe me-2"></i>Visit Site
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-sm-3">
-                            <img src="./asset/img/liti.png" class="imge_ mb-3"
-                                alt="LITI URL Shortener project screenshot" loading="lazy">
-                        </div>
+            <!-- publications -->
+            <div class="container-fluid mt-5 pt-5" id="publications">
+                <div class="row mb-4">
+                    <div class="col-12">
+                        <h2
+                            class="text-white text-left animate__animated animate__lightSpeedInRight animate__delay-1s animate__slower">
+                            Publications & Research
+                        </h2>
+                        <p class="text-white-50">Academic contributions and research interests in software
+                            engineering</p>
                     </div>
                 </div>
 
-                <!-- BrainBoost Project -->
-                <div class="entry__media p-4 col-sm-6 hoverBackgroundEntry">
-                    <div class="row">
-                        <div class="col-sm-9">
-                            <h3 class="text-white">BrainBoost - MCQ Learning Platform</h3>
-                            <p class="text-white-50">Enhance your learning journey with our student-friendly web
-                                app. Test your
-                                knowledge through multiple-choice questions (MCQs), while teachers can create
-                                customized test
-                                papers with easy download options.</p>
-                            <div class="mt-2">
-                                <h6 class="text-white">Educational Applications:</h6>
-                                <ul class="text-white-50">
-                                    <li>Serves as a case study for educational technology development</li>
-                                    <li>Demonstrates assessment system design and implementation</li>
-                                    <li>Showcases user role management and permission-based features</li>
-                                </ul>
-                            </div>
-                            <div class="tech-stack mt-3">
-                                <h6 class="text-white">Technologies:</h6>
-                                <div class="d-flex flex-wrap">
-                                    <span class="badge bg-secondary me-2 mb-2">Spring Boot</span>
-                                    <span class="badge bg-secondary me-2 mb-2">Hibernate</span>
-                                    <span class="badge bg-secondary me-2 mb-2">Thymeleaf</span>
-                                    <span class="badge bg-secondary me-2 mb-2">JavaMail</span>
-                                    <span class="badge bg-secondary me-2 mb-2">Bootstrap</span>
-                                    <span class="badge bg-secondary me-2 mb-2">jQuery</span>
-                                    <span class="badge bg-secondary me-2 mb-2">Font Awesome</span>
-                                </div>
-                            </div>
-                            <div class="mt-3">
-                                <a href="https://brainboost.cyou/" target="_blank" class="btn btn-outline-light me-2">
-                                    <i class="fa-solid fa-globe me-2"></i>Visit Site
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-sm-3">
-                            <img src="./asset/img/brainboost.png" class="imge_ mb-3"
-                                alt="BrainBoost MCQ Learning Platform screenshot" loading="lazy">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- open source -->
-        <div class="container-fluid mt-2" id="opensource">
-            <div class="row mb-4">
-                <div class="col-12">
-                    <h1
-                        class="text-white text-left animate__animated animate__lightSpeedInRight animate__delay-1s animate__slower">
-                        Open Source Contribution
-                    </h1>
-                    <p class="text-white-50">Software tools and extensions developed for the community</p>
-                </div>
-            </div>
-            <div class="entry m-2 p-4 row">
-                <div class="entry__meta p-4 col-sm-2 hoverBackgroundEntry">
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <h3 class="text-white">Vs Code
-                            </h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="entry__media p-4 col-sm-9">
-                    <div class="row">
-                        <div class="col-sm-3  hoverBackgroundEntry">
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <img src="./asset/img/vscode.png" class="imge_" alt="Visual Studio Code logo"
-                                        loading="lazy">
-                                    <a href="https://marketplace.visualstudio.com/publishers/LalithK90"
-                                        class="text-white-50 text-decoration-none h1">
-                                        <p class="text-center">
-                                            <i class="fa-solid fa-globe"></i>
-                                        </p>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-3  hoverBackgroundEntry">
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <img src="./asset/img/vsc.png" alt="VS Code Marketplace extensions" class="imge_"
-                                        loading="lazy">
-                                    <a href="https://open-vsx.org/namespace/LalithK90"
-                                        class="text-white-50 text-decoration-none h1">
-                                        <p class="text-center">
-                                            <i class="fa-solid fa-globe"></i>
-                                        </p>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Contact Form Section -->
-        <div class="container-fluid mt-5 pt-5" id="contact">
-            <div class="row mb-4">
-                <div class="col-12 text-center">
-                    <h1
-                        class="text-white text-left animate__animated animate__lightSpeedInRight animate__delay-1s animate__slower">
-                        Get In Touch
-                    </h1>
-                    <p class="text-white-50">Have a project in mind or want to collaborate? Tap the button
-                        below to open the contact form.</p>
-                    <button class="btn btn-primary btn-lg cta-button" data-bs-toggle="modal"
-                        data-bs-target="#contactModal">
-                        <i class="fas fa-paper-plane me-2"></i>Open Contact Form
-                    </button>
-                    <p class="mt-3 text-white-50"><i class="fas fa-envelope me-2"></i>Prefer email? <a
-                            href="mailto:asakahatapitiya@gmail.com"
-                            class="text-white-50 text-decoration-underline">asakahatapitiya@gmail.com</a></p>
-                </div>
-            </div>
-        </div>
-
-        <!-- footer -->
-        <footer>
-            <div class="container-fluid">
+                <!-- Two-column layout for publications -->
                 <div class="row">
-                    <div class="flex-column text-white text-center  animate__animated animate__fadeInLeft">
-                        LalithK90 &COPY; <span id="footerYear"></span>
+                    <!-- Combined Research Interests -->
+                    <div class="col-12">
+                        <div class="entry m-2 p-3 hoverBackgroundEntry">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fa-solid fa-microscope fa-3x text-white me-3"></i>
+                                <div>
+                                    <h3 class="text-white mb-0">Research Interests</h3>
+                                </div>
+                            </div>
+                            <div class="job-content">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <h5 class="text-white">Medical Image Analysis</h5>
+                                        <ul class="text-white-50">
+                                            <li>Computer-aided diagnosis systems</li>
+                                            <li>Medical image segmentation techniques</li>
+                                            <li>Feature extraction from radiological images</li>
+                                            <li>Software solutions for diagnostic imaging</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <h5 class="text-white">AI & Deep Learning Applications</h5>
+                                        <ul class="text-white-50">
+                                            <li>Convolutional Neural Networks for image classification</li>
+                                            <li>Transfer learning in limited medical datasets</li>
+                                            <li>Explainable AI for healthcare applications</li>
+                                            <li>Deep learning model optimization techniques</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <h5 class="text-white">Agricultural Software Systems</h5>
+                                        <ul class="text-white-50">
+                                            <li>Crop disease detection through image analysis</li>
+                                            <li>AI-powered decision support systems for agriculture</li>
+                                            <li>Real-time monitoring systems for agricultural applications</li>
+                                            <li>Integration of IoT devices with agricultural platforms</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Academic Profiles -->
+                <div class="entry m-2 p-3 hoverBackgroundEntry">
+                    <div class="d-flex align-items-center mb-3">
+                        <div>
+                            <h3 class="text-white mb-0">Academic Profiles</h3>
+                        </div>
+                    </div>
+                    <div class="job-content">
+                        <div class="row text-center">
+                            <div class="col-md-4 mb-3">
+                                <a href="https://scholar.google.com/citations?user=ojetDLIAAAAJ&hl=en"
+                                    class="text-white-50 text-decoration-none">
+                                    <img src="./asset/img/google-scholar.svg" class="imge_ mb-2"
+                                        alt="Google Scholar profile" loading="lazy">
+                                    <h5 class="text-white">Google Scholar</h5>
+                                </a>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <a href="https://www.researchgate.net/profile/Lalith-Kahatapitiya"
+                                    class="text-white-50 text-decoration-none">
+                                    <img src="./asset/img/researchget.png" class="imge_ mb-2" alt="ResearchGate profile"
+                                        loading="lazy">
+                                    <h5 class="text-white">ResearchGate</h5>
+                                </a>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <a href="https://pgis.academia.edu/LalithKahatapitiya"
+                                    class="text-white-50 text-decoration-none">
+                                    <img src="./asset/img/academia-edu.png" class="imge_ mb-2"
+                                        alt="Academia.edu profile" loading="lazy">
+                                    <h5 class="text-white">Academia</h5>
+                                </a>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <a href="https://orcid.org/0009-0007-3364-7811"
+                                    class="text-white-50 text-decoration-none">
+                                    <img src="./asset/img/orcid.png" class="imge_ mb-2"
+                                        alt="ORCID researcher identifier" loading="lazy">
+                                    <h5 class="text-white">ORCID</h5>
+                                </a>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <a href="https://osf.io/xzdms" class="text-white-50 text-decoration-none">
+                                    <img src="./asset/img/osf.png" class="imge_ mb-2"
+                                        alt="Open Science Framework profile" loading="lazy">
+                                    <h5 class="text-white">OSF</h5>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </footer>
-    </div>
 
+            <!-- membership -->
+            <div class="container-fluid mt-5 pt-5" id="membership">
+                <div class="row mb-4">
+                    <div class="col-12">
+                        <h2
+                            class="text-white text-left animate__animated animate__lightSpeedInRight animate__delay-1s animate__slower">
+                            Membership & Licenses
+                        </h2>
+                        <p class="text-white-50">Professional affiliations and certifications</p>
+                    </div>
+                </div>
+                <div class="entry  entry__media p-4 row">
+                    <div class="col-sm-4 p-2 hoverBackgroundEntry">
+                        <div class="row">
+                            <div class="col-sm-7">
+                                <h5 class="text-white text-center">Computer Society of Sri Lanka</h5>
+                                <p class="text-white-50">Register Number : M2225</p>
+                                <a href="https://cssl.lk/" class="text-white-50 text-decoration-none h1"
+                                    aria-label="Visit Computer Society of Sri Lanka website">
+                                    <p class="text-center"><i class="fa-solid fa-globe"></i>
+                                    </p>
+                                </a>
+                            </div>
+                            <div class="col-sm-3">
+                                <img src="./asset/img/cssl.png" class="imge_" alt="Computer Society of Sri Lanka logo"
+                                    loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 p-2 hoverBackgroundEntry">
+                        <div class="row">
+                            <div class="col-sm-7">
+                                <h5 class="text-white">Sri Lanka Medical Council</h5>
+                                <p class="text-white-50">Register Number : 0697</p>
+                                <a href="https://slmc.gov.lk/en/" class="text-white-50 text-decoration-none h1"
+                                    aria-label="Visit Sri Lanka Medical Council website">
+                                    <p class="text-center"><i class="fa-solid fa-globe"></i>
+                                    </p>
+                                </a>
+                            </div>
+                            <div class="col-sm-3">
+                                <img src="./asset/img/slmc.jpeg" class="imge_" alt="Sri Lanka Medical Council logo"
+                                    loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 p-2 hoverBackgroundEntry">
+                        <div class="row">
+                            <div class="col-sm-7">
+                                <h5 class="text-white text-center">Society of Radiological Technologist</h5>
+                                <p class="text-white-50">Register Number : 0742</p>
+                                <a href="https://www.srtsl.com/" class="text-white-50 text-decoration-none h1"
+                                    aria-label="Visit Society of Radiological Technologist website">
+                                    <p class="text-center"><i class="fa-solid fa-globe"></i>
+                                    </p>
+                                </a>
+                            </div>
+                            <div class="col-sm-3">
+                                <img src="/asset/img/slrt.jpeg" class="imge_"
+                                    alt="Society of Radiological Technologist logo" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- projects -->
+            <div class="container-fluid mt-5 pt-5" id="projects">
+                <div class="row mb-4">
+                    <div class="col-12">
+                        <h2
+                            class="text-white text-left animate__animated animate__lightSpeedInRight animate__delay-1s animate__slower">
+                            Featured Projects
+                        </h2>
+                        <p class="text-white-50">Innovative applications with educational and research applications
+                        </p>
+                    </div>
+                </div>
+                <div class="entry m-2 p-4 row">
+                    <!-- LITI Project -->
+                    <div class="entry__meta p-4 col-sm-6 hoverBackgroundEntry">
+                        <div class="row">
+                            <div class="col-sm-9">
+                                <h3 class="text-white">LITI - URL Shortener</h3>
+                                <p class="text-white-50">LnkTrim your URLs with the best URL shortener app. Free and
+                                    pro
+                                    services
+                                    with customizable analytics features, link tracking, and social media
+                                    optimization.
+                                </p>
+                                <div class="mt-2">
+                                    <h6 class="text-white">Educational Applications:</h6>
+                                    <ul class="text-white-50">
+                                        <li>Demonstrates RESTful API design principles and best practices</li>
+                                        <li>Showcases secure user authentication and authorization flows</li>
+                                        <li>Illustrates data analytics implementation and visualization techniques
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="tech-stack mt-3">
+                                    <h6 class="text-white">Technologies:</h6>
+                                    <div class="d-flex flex-wrap">
+                                        <span class="badge bg-secondary me-2 mb-2">Spring Boot</span>
+                                        <span class="badge bg-secondary me-2 mb-2">Hibernate</span>
+                                        <span class="badge bg-secondary me-2 mb-2">Thymeleaf</span>
+                                        <span class="badge bg-secondary me-2 mb-2">JavaMail</span>
+                                        <span class="badge bg-secondary me-2 mb-2">Bootstrap</span>
+                                        <span class="badge bg-secondary me-2 mb-2">jQuery</span>
+                                    </div>
+                                </div>
+                                <div class="mt-3">
+                                    <a href="https://liti.cyou/" target="_blank" class="btn btn-outline-light me-2">
+                                        <i class="fa-solid fa-globe me-2"></i>Visit Site
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <img src="./asset/img/liti.png" class="imge_ mb-3"
+                                    alt="LITI URL Shortener project screenshot" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BrainBoost Project -->
+                    <div class="entry__media p-4 col-sm-6 hoverBackgroundEntry">
+                        <div class="row">
+                            <div class="col-sm-9">
+                                <h3 class="text-white">BrainBoost - MCQ Learning Platform</h3>
+                                <p class="text-white-50">Enhance your learning journey with our student-friendly web
+                                    app. Test your
+                                    knowledge through multiple-choice questions (MCQs), while teachers can create
+                                    customized test
+                                    papers with easy download options.</p>
+                                <div class="mt-2">
+                                    <h6 class="text-white">Educational Applications:</h6>
+                                    <ul class="text-white-50">
+                                        <li>Serves as a case study for educational technology development</li>
+                                        <li>Demonstrates assessment system design and implementation</li>
+                                        <li>Showcases user role management and permission-based features</li>
+                                    </ul>
+                                </div>
+                                <div class="tech-stack mt-3">
+                                    <h6 class="text-white">Technologies:</h6>
+                                    <div class="d-flex flex-wrap">
+                                        <span class="badge bg-secondary me-2 mb-2">Spring Boot</span>
+                                        <span class="badge bg-secondary me-2 mb-2">Hibernate</span>
+                                        <span class="badge bg-secondary me-2 mb-2">Thymeleaf</span>
+                                        <span class="badge bg-secondary me-2 mb-2">JavaMail</span>
+                                        <span class="badge bg-secondary me-2 mb-2">Bootstrap</span>
+                                        <span class="badge bg-secondary me-2 mb-2">jQuery</span>
+                                        <span class="badge bg-secondary me-2 mb-2">Font Awesome</span>
+                                    </div>
+                                </div>
+                                <div class="mt-3">
+                                    <a href="https://brainboost.cyou/" target="_blank"
+                                        class="btn btn-outline-light me-2">
+                                        <i class="fa-solid fa-globe me-2"></i>Visit Site
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <img src="./asset/img/brainboost.png" class="imge_ mb-3"
+                                    alt="BrainBoost MCQ Learning Platform screenshot" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- open source -->
+            <div class="container-fluid mt-2" id="opensource">
+                <div class="row mb-4">
+                    <div class="col-12">
+                        <h2
+                            class="text-white text-left animate__animated animate__lightSpeedInRight animate__delay-1s animate__slower">
+                            Open Source Contribution
+                        </h2>
+                        <p class="text-white-50">Software tools and extensions developed for the community</p>
+                    </div>
+                </div>
+                <div class="entry m-2 p-4 row">
+                    <div class="entry__meta p-4 col-sm-2 hoverBackgroundEntry">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h3 class="text-white">Vs Code
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="entry__media p-4 col-sm-9">
+                        <div class="row">
+                            <div class="col-sm-3  hoverBackgroundEntry">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <img src="./asset/img/vscode.png" class="imge_" alt="Visual Studio Code logo"
+                                            loading="lazy">
+                                        <a href="https://marketplace.visualstudio.com/publishers/LalithK90"
+                                            class="text-white-50 text-decoration-none h1"
+                                            aria-label="View VS Code Marketplace extensions">
+                                            <p class="text-center">
+                                                <i class="fa-solid fa-globe"></i>
+                                            </p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3  hoverBackgroundEntry">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <img src="./asset/img/vsc.png" alt="VS Code Marketplace extensions"
+                                            class="imge_" loading="lazy">
+                                        <a href="https://open-vsx.org/namespace/LalithK90"
+                                            class="text-white-50 text-decoration-none h1"
+                                            aria-label="View Open VSX registry extensions">
+                                            <p class="text-center">
+                                                <i class="fa-solid fa-globe"></i>
+                                            </p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form Section -->
+            <div class="container-fluid mt-5 pt-5" id="contact">
+                <div class="row mb-4">
+                    <div class="col-12 text-center">
+                        <h2
+                            class="text-white text-left animate__animated animate__lightSpeedInRight animate__delay-1s animate__slower">
+                            Get In Touch
+                        </h2>
+                        <p class="text-white-50">Have a project in mind or want to collaborate? Tap the button
+                            below to open the contact form.</p>
+                        <button class="btn btn-primary btn-lg cta-button" data-bs-toggle="modal"
+                            data-bs-target="#contactModal">
+                            <i class="fas fa-paper-plane me-2"></i>Open Contact Form
+                        </button>
+                        <p class="mt-3 text-white-50"><i class="fas fa-envelope me-2"></i>Prefer email? <a
+                                href="mailto:asakahatapitiya@gmail.com"
+                                class="text-white-50 text-decoration-underline">asakahatapitiya@gmail.com</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- footer -->
+            <footer>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="flex-column text-white text-center  animate__animated animate__fadeInLeft">
+                            LalithK90 &COPY; <span id="footerYear"></span>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
     <!-- Contact Modal -->
     <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
