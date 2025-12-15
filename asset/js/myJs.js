@@ -53,35 +53,35 @@ cursorTimeline.to('#cursor', {
 
 // Modern Scroll Interactions
 gsap.utils.toArray(".experience-card").forEach(card => {
-  gsap.from(card, {
-    scrollTrigger: {
-      trigger: card,
-      start: "top center+=100",
-      toggleActions: "play none none reverse"
-    },
-    opacity: 0,
-    y: 50,
-    duration: 0.8
-  });
+    gsap.from(card, {
+        scrollTrigger: {
+            trigger: card,
+            start: "top center+=100",
+            toggleActions: "play none none reverse"
+        },
+        opacity: 0,
+        y: 50,
+        duration: 0.8
+    });
 });
 
 // Dynamic Active Section Highlight
 const sections = document.querySelectorAll('section');
 window.addEventListener('scroll', () => {
-  let current = '';
-  sections.forEach(section => {
-    const sectionTop = section.offsetTop;
-    if (scrollY >= sectionTop - 300) {
-      current = section.getAttribute('id');
-    }
-  });
-  
-  document.querySelectorAll('.nav-link').forEach(link => {
-    link.classList.remove('active');
-    if(link.getAttribute('href') === `#${current}`) {
-      link.classList.add('active');
-    }
-  });
+    let current = '';
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (scrollY >= sectionTop - 300) {
+            current = section.getAttribute('id');
+        }
+    });
+
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+            link.classList.add('active');
+        }
+    });
 });
 
 // lenis smooth scroll
@@ -101,12 +101,12 @@ $(".navbar .nav-link").on("click", function () {
 });
 
 // Security features remain unchanged
-document.addEventListener('contextmenu', (event) => {
-    event.preventDefault();
-});
+// document.addEventListener('contextmenu', (event) => {
+//     event.preventDefault();
+// });
 
 document.addEventListener('keydown', (event) => {
-    const forbiddenKeys = ['F12', 'Ctrl+Shift+I', 'Ctrl+Shift+J'];
+    const forbiddenKeys = [ 'F12', 'Ctrl+Shift+I', 'Ctrl+Shift+J' ];
     if (forbiddenKeys.includes(event.key)) {
         event.preventDefault();
     }
@@ -132,16 +132,16 @@ document.addEventListener('keydown', (e) => {
 });
 
 /* TO DO: There are combinations that remain to be solved  --> Windows+Shift+S */
-var before = new Date().getTime();
-debugger;
-var after = new Date().getTime();
-if (after - before > 100) {
-    // User had to resume the script manually via opened dev tools
-    console.log("Developer tools are open");
-    window.location.reload();
-} else {
-    console.log("Developer tools are closed");
-}
+// var before = new Date().getTime();
+// debugger;
+// var after = new Date().getTime();
+// if (after - before > 100) {
+//     // User had to resume the script manually via opened dev tools
+//     console.log("Developer tools are open");
+//     window.location.reload();
+// } else {
+//     console.log("Developer tools are closed");
+// }
 
 /* youtube link show */
 
