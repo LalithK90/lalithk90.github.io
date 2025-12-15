@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Lalith Kahatapitiya - Curriculum Vitae</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <style>
+        :root {
+            --primary-color: #0B0036;
+            --secondary-color: #F2B279;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+        }
+
+        .cv-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .cv-header {
+            text-align: center;
+            border-bottom: 3px solid var(--primary-color);
+            padding-bottom: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .cv-header h1 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .cv-header .tagline {
+            color: #666;
+            font-size: 1.1rem;
+            font-style: italic;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .contact-info a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .section-title {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 0.5rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .experience-item,
+        .education-item {
+            margin-bottom: 1.5rem;
+            page-break-inside: avoid;
+        }
+
+        .experience-item h3,
+        .education-item h3 {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .experience-item .company,
+        .education-item .institution {
+            color: #555;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .experience-item .date,
+        .education-item .date {
+            color: var(--secondary-color);
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .experience-item ul,
+        .education-item ul {
+            margin-left: 1.25rem;
+            margin-bottom: 0;
+        }
+
+        .experience-item li {
+            margin-bottom: 0.25rem;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .skill-category h4 {
+            color: var(--primary-color);
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .skill-category ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .skill-category li:before {
+            content: "▸ ";
+            color: var(--secondary-color);
+        }
+
+        .print-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        @media print {
+
+            .print-button,
+            .no-print {
+                display: none !important;
+            }
+
+            body {
+                font-size: 11pt;
+            }
+
+            .cv-container {
+                max-width: 100%;
+                padding: 0;
+            }
+
+            .section-title {
+                page-break-after: avoid;
+            }
+
+            .experience-item,
+            .education-item {
+                page-break-inside: avoid;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
+            }
+
+            .print-button {
+                position: static;
+                width: 100%;
+                margin-bottom: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <button class="btn btn-primary print-button no-print" onclick="window.print()">
+        <i class="fas fa-print"></i> Print / Save as PDF
+    </button>
+
+    <div class="cv-container">
+        <!-- Header -->
+        <div class="cv-header">
+            <h1>Lalith Kahatapitiya</h1>
+            <p class="tagline">IT Specialist | Software Engineer | Lecturer | Radiographer</p>
+            <div class="contact-info">
+                <span><i class="fas fa-envelope"></i> asakahatapitiya@gmail.com</span>
+                <span><i class="fas fa-globe"></i> <a href="https://lalithk90.github.io"
+                        target="_blank">lalithk90.github.io</a></span>
+                <span><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/lalithk90"
+                        target="_blank">linkedin.com/in/lalithk90</a></span>
+                <span><i class="fab fa-github"></i> <a href="https://github.com/LalithK90"
+                        target="_blank">github.com/LalithK90</a></span>
+            </div>
+        </div>
+
+        <!-- Professional Summary -->
+        <section>
+            <h2 class="section-title">Professional Summary</h2>
+            <p>Former radiographer turned software engineer with a unique blend of healthcare expertise and technical
+                prowess. Experienced in IT infrastructure management, software development, and academic instruction.
+                Combining strong communication skills with technical knowledge to make a social impact through
+                innovative technology solutions.</p>
+        </section>
+
+        <!-- Professional Experience -->
+        <section>
+            <h2 class="section-title">Professional Experience</h2>
+
+            <div class="experience-item">
+                <h3>IT Specialist</h3>
+                <div class="company">Saim University, Thailand</div>
+                <div class="date">August 2025 - Present</div>
+                <ul>
+                    <li>Managing and maintaining university IT infrastructure and systems</li>
+                    <li>Implementing technology solutions for academic and administrative operations</li>
+                    <li>Providing technical support and training to faculty and staff</li>
+                    <li>Ensuring network security and data protection across university systems</li>
+                    <li>Collaborating with international teams on digital transformation initiatives</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <h3>Visiting Lecturer</h3>
+                <div class="company">Sri Lanka Institute of Advanced Technological Education (SLIATE) - Anuradhapura
+                </div>
+                <div class="date">March 2025 - July 2025</div>
+                <ul>
+                    <li>Lectured first-year students in Software Analysis and Design (HNDIT2032)</li>
+                    <li>Taught second-year students in Enterprise Architecture (HNDIT4232) and Business Analysis
+                        (HNDIT4222)</li>
+                    <li>Designed and assessed practical, industry-aligned assignments</li>
+                    <li>Used hands-on methods like case studies, demos, and projects to improve engagement</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <h3>Visiting Lecturer</h3>
+                <div class="company">World Wide Wisdom Campus (PVT) Ltd</div>
+                <div class="date">June 2023 - July 2025</div>
+                <ul>
+                    <li>Led IT6105 Software Development Project module for BIT Degree Program</li>
+                    <li>Designed curriculum bridging theoretical concepts with practical industry applications</li>
+                    <li>Mentored students through complex software architecture decisions</li>
+                    <li>Evaluated project deliverables with detailed technical feedback</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <h3>Radiographer</h3>
+                <div class="company">Asiri Group of Hospital Kandy (PVT) Ltd</div>
+                <div class="date">February 2022 - July 2025</div>
+                <ul>
+                    <li>Performed digital radiography examinations producing high-quality diagnostic images</li>
+                    <li>Conducted specialized dental imaging including OPG and lateral cephalograms</li>
+                    <li>Executed C-RAM procedures for interventional cases across multiple specialties</li>
+                    <li>Operated advanced CT and MRI equipment (Philips, GE, CareStream)</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <h3>Co-Founder</h3>
+                <div class="company">Developers-in (PVT) Ltd</div>
+                <div class="date">September 2020 - December 2021</div>
+                <ul>
+                    <li>Co-founded software development company specializing in enterprise solutions</li>
+                    <li>Architected full-stack applications using Spring Framework with Thymeleaf frontend</li>
+                    <li>Implemented strategic business initiatives across finance, HR, and marketing</li>
+                    <li>Led development teams through complete software development lifecycle</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <h3>Director and Lecturer</h3>
+                <div class="company">World Wide Wisdom Campus (PVT) Ltd</div>
+                <div class="date">June 2020 - June 2023</div>
+                <ul>
+                    <li>Developed and implemented data-driven strategies for finance and marketing departments</li>
+                    <li>Coordinated IT6105 Software Development Project module curriculum</li>
+                    <li>Supervised student projects with focus on industry-relevant technologies</li>
+                    <li>Established partnerships with technology companies for student internships</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section>
+            <h2 class="section-title">Education</h2>
+
+            <div class="education-item">
+                <h3>Master of Computer Science</h3>
+                <div class="institution">Postgraduate Institute of Science, University of Peradeniya</div>
+                <div class="date">September 2020</div>
+            </div>
+
+            <div class="education-item">
+                <h3>Bachelor of Information Technology</h3>
+                <div class="institution">University of Colombo School of Computing</div>
+                <div class="date">2015 - 2018</div>
+            </div>
+
+            <div class="education-item">
+                <h3>Higher Diploma in Diagnostic Radiography</h3>
+                <div class="institution">Sri Lanka School of Radiography</div>
+                <div class="date">2014 - 2016</div>
+            </div>
+
+            <div class="education-item">
+                <h3>Diploma in Business Management</h3>
+                <div class="institution">ESOFT Metro Campus</div>
+                <div class="date">2019 - 2020</div>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section>
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4>Programming Languages</h4>
+                    <ul>
+                        <li>Java</li>
+                        <li>JavaScript</li>
+                        <li>Python</li>
+                        <li>SQL</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h4>Frameworks & Technologies</h4>
+                    <ul>
+                        <li>Spring Boot</li>
+                        <li>React</li>
+                        <li>Thymeleaf</li>
+                        <li>Hibernate</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h4>Infrastructure & Systems</h4>
+                    <ul>
+                        <li>IT Infrastructure Management</li>
+                        <li>Network Security</li>
+                        <li>Database Administration</li>
+                        <li>System Integration</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h4>Medical Equipment</h4>
+                    <ul>
+                        <li>Digital Radiography</li>
+                        <li>CT & MRI Systems</li>
+                        <li>Philips, GE, CareStream</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Professional Memberships -->
+        <section>
+            <h2 class="section-title">Professional Memberships & Licenses</h2>
+            <ul>
+                <li><strong>Computer Society of Sri Lanka</strong> - Member (M2225)</li>
+                <li><strong>Sri Lanka Medical Council</strong> - Registered (0697)</li>
+                <li><strong>Society of Radiological Technologist</strong> - Registered (0742)</li>
+            </ul>
+        </section>
+
+        <!-- Research Interests -->
+        <section>
+            <h2 class="section-title">Research Interests</h2>
+            <ul>
+                <li>Medical Image Analysis & Computer-aided diagnosis systems</li>
+                <li>AI & Deep Learning Applications in Healthcare</li>
+                <li>Agricultural Software Systems & Crop disease detection</li>
+            </ul>
+            <p><strong>Academic Profiles:</strong> Google Scholar | ResearchGate | ORCID (0009-0007-3364-7811)</p>
+        </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

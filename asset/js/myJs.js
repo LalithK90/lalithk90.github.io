@@ -95,64 +95,61 @@ gsap.ticker.add((time) => {
 
 gsap.ticker.lagSmoothing(0);
 
-$(".navbar .nav-link").on("click", function () {
-    $(".navbar").find(".active").removeClass("active");
-    $(this).addClass("active");
+// Vanilla JS: Handle active nav link on click
+document.querySelectorAll('.navbar .nav-link').forEach(link => {
+    link.addEventListener('click', function () {
+        document.querySelectorAll('.navbar .nav-link').forEach(l => l.classList.remove('active'));
+        this.classList.add('active');
+    });
 });
 
-// Security features remain unchanged
-// document.addEventListener('contextmenu', (event) => {
-//     event.preventDefault();
-// });
-
-document.addEventListener('keydown', (event) => {
-    const forbiddenKeys = [ 'F12', 'Ctrl+Shift+I', 'Ctrl+Shift+J' ];
-    if (forbiddenKeys.includes(event.key)) {
-        event.preventDefault();
-    }
-});
-
-document.addEventListener('copy', (event) => {
-    event.preventDefault();
-});
-
-/** TO DISABLE SCREEN CAPTURE **/
-document.addEventListener('keyup', (e) => {
-    if (e.key == 'PrintScreen') {
-        navigator.clipboard.writeText('');
-        alert('Screenshots disabled!');
-    }
-});
-
-/** TO DISABLE PRINTS WHIT CTRL+P **/
-document.addEventListener('keydown', (e) => {
-    if (e.ctrlKey && e.key == 'p') {
-        alert('This section is not allowed to print or export to PDF');
-    }
-});
-
-/* TO DO: There are combinations that remain to be solved  --> Windows+Shift+S */
-// var before = new Date().getTime();
-// debugger;
-// var after = new Date().getTime();
-// if (after - before > 100) {
-//     // User had to resume the script manually via opened dev tools
-//     console.log("Developer tools are open");
-//     window.location.reload();
-// } else {
-//     console.log("Developer tools are closed");
-// }
+// (Intentionally allow copy/print and dev tools to keep UX friendly)
 
 /* youtube link show */
 
 const dropdownToggle = document.querySelector('.dmb');
-$('.dmsec').hide();
-dropdownToggle.addEventListener('mouseenter', () => {
-    $('.dmsec').show("slow");
+const dropdownSection = document.querySelector('.dmsec');
+
+if (dropdownToggle && dropdownSection) {
+    dropdownSection.style.display = 'none';
+
+    dropdownToggle.addEventListener('mouseenter', () => {
+        dropdownSection.style.display = 'block';
+        dropdownSection.style.opacity = '1';
+    });
+
+    dropdownToggle.addEventListener('mouseleave', () => {
+        dropdownSection.style.opacity = '0';
+        setTimeout(() => {
+            dropdownSection.style.display = 'none';
+        }, 300);
+    });
+}
+
+// Dark/Light Theme Toggle
+document.addEventListener('DOMContentLoaded', () => {
+    const themeToggle = document.getElementById('themeToggle');
+    const htmlElement = document.documentElement;
+
+    // Load saved theme from localStorage
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    if (savedTheme === 'light') {
+        htmlElement.classList.add('light-theme');
+        themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+    } else {
+        themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+    }
+
+    // Toggle theme on button click
+    themeToggle.addEventListener('click', () => {
+        if (htmlElement.classList.contains('light-theme')) {
+            htmlElement.classList.remove('light-theme');
+            localStorage.setItem('theme', 'dark');
+            themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        } else {
+            htmlElement.classList.add('light-theme');
+            localStorage.setItem('theme', 'light');
+            themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        }
+    });
 });
-
-dropdownToggle.addEventListener('mouseleave', () => {
-    $('.dmsec').fadeOut(9999);
-});
-
-
