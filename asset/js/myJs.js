@@ -1,25 +1,82 @@
-// page loader
-const loaderContainer = document.querySelector('.loader-container');
-const pageContent = document.querySelector('#page-content');
-window.addEventListener('load', () => {
-    if (loaderContainer) {
-        loaderContainer.classList.add('hidden');
-    }
-    if (pageContent) {
-        pageContent.classList.add('visible');
-    }
-});
-let currentYear = new Date();
-let fullYear = currentYear.getFullYear();
-document.querySelector("#footerYear").textContent = fullYear;
+// ============================================
+// CORE: Show content & Initialize Libraries
+// ============================================
 
-// professions display 
-let words = [ 'Software Engineer', 'Radiographer', 'Lecturer' ];
-//main timeline
-let mainTimeLine = gsap.timeline({
-    repeat: -1
+// Show page content immediately
+$(document).ready(function () {
+    $('.loader-container').addClass('hidden');
+    $('#page-content').addClass('visible');
+    console.log('✓ Content loaded');
 });
-// For each word, create a new timeline, use the Text plugin, then append that timeline to the main one;
+
+// Initialize AOS if available
+if (typeof AOS !== 'undefined') {
+    AOS.init({
+        duration: 800,
+        easing: 'ease-in-out',
+        once: false,
+        mirror: true,
+        offset: 100
+    });
+    console.log('✓ AOS initialized');
+}
+
+// ============================================
+// SIMPLE SCROLL ANIMATIONS (No dependencies)
+// ============================================
+
+// Scroll animation for elements with data-aos attribute (native fallback)
+const observerOptions = {
+    threshold: 0.12,
+    rootMargin: '0px 0px -80px 0px'
+};
+
+const observer = new IntersectionObserver(function (entries) {
+    entries.forEach(entry => {
+        const element = entry.target;
+        const animation = element.getAttribute('data-aos');
+
+        if (entry.isIntersecting) {
+            if (animation) {
+                element.classList.add('aos-animate');
+                console.log(`✓ Animating: ${animation}`);
+            }
+            // Once animated, keep it animated (unobserve to prevent reset on scroll-up)
+            observer.unobserve(element);
+        }
+    });
+}, observerOptions);
+
+// Observe all elements with data-aos, apply optional delay
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('[data-aos]').forEach(el => {
+        const delay = el.getAttribute('data-aos-delay');
+        if (delay) {
+            const d = /ms|s$/i.test(delay) ? delay : `${delay}ms`;
+            el.style.transitionDelay = d;
+        }
+        const duration = el.getAttribute('data-aos-duration');
+        if (duration) {
+            const dur = /ms|s$/i.test(duration) ? duration : `${duration}ms`;
+            el.style.setProperty('--aos-duration', dur);
+        }
+        const easing = el.getAttribute('data-aos-easing');
+        if (easing) {
+            el.style.setProperty('--aos-ease', easing);
+        }
+        el.classList.add('aos-init');
+        observer.observe(el);
+    });
+    console.log('✓ Scroll observer initialized');
+});
+
+// ============================================
+// TYPEWRITER & ANIMATIONS
+// ============================================
+
+// Professions display with GSAP
+let words = [ 'Software Engineer', 'Radiographer', 'Lecturer' ];
+let mainTimeLine = gsap.timeline({ repeat: -1 });
 
 words.forEach(word => {
     let textTimeline = gsap.timeline({
@@ -44,18 +101,17 @@ words.forEach(word => {
 // Blinking cursor
 let cursorTimeline = gsap.timeline({
     repeat: -1,
-    repeatDelay: .8
+    repeatDelay: 0.8
 });
-cursorTimeline.to('#cursor', {
-    opacity: 1,
-    duration: 0
-}).to('#cursor', {
-    opacity: 0,
-    duration: 0,
-    delay: .81
-});
+cursorTimeline
+    .to('#cursor', { opacity: 1, duration: 0 })
+    .to('#cursor', { opacity: 0, duration: 0, delay: 0.81 });
 
-// Modern Scroll Interactions
+// ============================================
+// SCROLL INTERACTIONS
+// ============================================
+
+// Scroll animations for experience cards
 gsap.utils.toArray(".experience-card").forEach(card => {
     gsap.from(card, {
         scrollTrigger: {
@@ -69,128 +125,102 @@ gsap.utils.toArray(".experience-card").forEach(card => {
     });
 });
 
-// Dynamic Active Section Highlight
-const sections = document.querySelectorAll('section');
-window.addEventListener('scroll', () => {
-    let current = '';
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        if (scrollY >= sectionTop - 300) {
-            current = section.getAttribute('id');
-        }
-    });
-
-    document.querySelectorAll('.nav-link').forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${current}`) {
-            link.classList.add('active');
-        }
-    });
-});
-
-// lenis smooth scroll
-const lenis = new Lenis();
-
-lenis.on('scroll', ScrollTrigger.update);
-
-gsap.ticker.add((time) => {
-    lenis.raf(time * 1000);
-});
-
-gsap.ticker.lagSmoothing(0);
-
-// Vanilla JS: Handle active nav link on click
-document.querySelectorAll('.navbar .nav-link').forEach(link => {
-    link.addEventListener('click', function () {
-        document.querySelectorAll('.navbar .nav-link').forEach(l => l.classList.remove('active'));
-        this.classList.add('active');
+// Active section highlight on scroll
+$(function () {
+    const $sections = $('section');
+    $(window).on('scroll', function () {
+        const scrollTop = $(this).scrollTop();
+        let current = '';
+        $sections.each(function () {
+            const $sec = $(this);
+            const top = $sec.offset().top;
+            if (scrollTop >= top - 300) {
+                current = $sec.attr('id');
+            }
+        });
+        $('.nav-link').removeClass('active')
+            .filter(`[href="#${current}"]`).addClass('active');
     });
 });
 
-// (Intentionally allow copy/print and dev tools to keep UX friendly)
-
-/* youtube link show */
-
-const dropdownToggle = document.querySelector('.dmb');
-const dropdownSection = document.querySelector('.dmsec');
-
-if (dropdownToggle && dropdownSection) {
-    dropdownSection.style.display = 'none';
-
-    dropdownToggle.addEventListener('mouseenter', () => {
-        dropdownSection.style.display = 'block';
-        dropdownSection.style.opacity = '1';
+// Handle nav link click
+$(function () {
+    $('.navbar .nav-link').on('click', function () {
+        $('.navbar .nav-link').removeClass('active');
+        $(this).addClass('active');
     });
+});
 
-    dropdownToggle.addEventListener('mouseleave', () => {
-        dropdownSection.style.opacity = '0';
-        setTimeout(() => {
-            dropdownSection.style.display = 'none';
-        }, 300);
-    });
-}
+// ============================================
+// UTILITIES
+// ============================================
+
+// Set current year in footer
+$(function () {
+    $('#footerYear').text(new Date().getFullYear());
+});
+
+// YouTube link hover show
+$(function () {
+    const $toggle = $('.dmb');
+    const $section = $('.dmsec');
+    if ($toggle.length && $section.length) {
+        $section.hide();
+        $toggle.hover(
+            () => $section.stop(true, true).fadeIn(150),
+            () => $section.stop(true, true).fadeOut(300)
+        );
+    }
+});
 
 // Dark/Light Theme Toggle
-document.addEventListener('DOMContentLoaded', () => {
-    const themeToggle = document.getElementById('themeToggle');
-    const htmlElement = document.documentElement;
-    const mainImage = document.getElementById('main_image');
-    const typewriter = document.getElementById('typewriter');
-    const cursor = document.getElementById('cursor');
-    const h1Element = document.getElementById('h1');
-    const firstSpan = h1Element ? h1Element.querySelector('span:first-child') : null;
+$(function () {
+    const $themeToggle = $('#themeToggle');
+    const $html = $(document.documentElement);
+    const $mainImage = $('#main_image');
+    const $typewriter = $('#typewriter');
+    const $cursor = $('#cursor');
+    const $firstSpan = $('#h1').find('span:first');
 
-    // Function to update main image based on theme
     function updateMainImage (theme) {
-        if (mainImage) {
-            if (theme === 'light') {
-                mainImage.src = '/asset/img/main_image_l.png';
-            } else {
-                mainImage.src = '/asset/img/main_image.png';
-            }
-        }
+        if (!$mainImage.length) return;
+        $mainImage.attr('src', theme === 'light' ? '/asset/img/main_image_l.png' : '/asset/img/main_image.png');
     }
 
-    // Function to update typewriter, cursor and first span colors based on theme
     function updateTypewriterColor (theme) {
-        if (typewriter) {
-            typewriter.style.color = '#F2B279';
-        }
-        if (cursor) {
-            cursor.style.color = '#F2B279';
-        }
-        if (firstSpan) {
-            firstSpan.style.color = '#F2B279';
-        }
+        const color = '#F2B279';
+        $typewriter.css('color', color);
+        $cursor.css('color', color);
+        $firstSpan.css('color', color);
     }
 
-    // Load saved theme from localStorage
     const savedTheme = localStorage.getItem('theme') || 'dark';
     if (savedTheme === 'light') {
-        htmlElement.classList.add('light-theme');
-        themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        $html.addClass('light-theme');
+        $themeToggle.html('<i class="fas fa-sun"></i>');
         updateMainImage('light');
         updateTypewriterColor('light');
     } else {
-        themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        $themeToggle.html('<i class="fas fa-moon"></i>');
         updateMainImage('dark');
         updateTypewriterColor('dark');
     }
 
-    // Toggle theme on button click
-    themeToggle.addEventListener('click', () => {
-        if (htmlElement.classList.contains('light-theme')) {
-            htmlElement.classList.remove('light-theme');
+    $themeToggle.on('click', function () {
+        if ($html.hasClass('light-theme')) {
+            $html.removeClass('light-theme');
             localStorage.setItem('theme', 'dark');
-            themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+            $themeToggle.html('<i class="fas fa-moon"></i>');
             updateMainImage('dark');
             updateTypewriterColor('dark');
         } else {
-            htmlElement.classList.add('light-theme');
+            $html.addClass('light-theme');
             localStorage.setItem('theme', 'light');
-            themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+            $themeToggle.html('<i class="fas fa-sun"></i>');
             updateMainImage('light');
             updateTypewriterColor('light');
         }
     });
 });
+
+console.log('✓ myJs.js fully loaded');

@@ -23,49 +23,79 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
 
-    <!-- Bootstrap CSS v5.2.1 - Deferred for performance -->
+    <!-- Bootstrap CSS v5.3.2 - Deferred for performance -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" media="print"
         onload="this.media='all'" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         media="print" onload="this.media='all'" />
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;700&family=Inter:wght@400;500;700&display=swap"
+
+    <!-- Google Fonts - Preload for faster rendering -->
+    <link href="https://fonts.googleapis.com/css2?family=Artifika&family=Inter:wght@400;500;700&display=swap"
         rel="stylesheet">
 
-    <!-- Animate css - Deferred -->
+    <!-- Animate CSS - Deferred -->
     <link rel="stylesheet" href="/asset/css/animate.css" media="print" onload="this.media='all'">
 
-    <noscript>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-        <link rel="stylesheet" href="/asset/css/animate.css">
-    </noscript>
+    <!-- AOS (Animate On Scroll) CSS - Loaded immediately for better performance -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-    <!--    /* Interactive Header from https://tympanus.net/Development/AnimatedHeaderBackgrounds/index.html*/ -->
+    <!-- Custom Styles (minified) -->
     <link rel="stylesheet" href="/asset/css/myCss.css">
-
-    <!-- Bootstrap JavaScript Libraries -->
-    <script defer src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
-
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/TextPlugin.min.js"></script>
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
-    <script defer src="/asset/js/plugins.js"></script>
-    <script defer src="/asset/js/myJs.js"></script>
 
 </head>
 
 <body>
-
+    <!-- loader -->
     <div class="loader-container">
-        <div class="loader"></div>
+        <div class="terminal-loader">
+            <div class="terminal-header">
+                <div class="terminal-buttons">
+                    <span class="button red"></span>
+                    <span class="button yellow"></span>
+                    <span class="button green"></span>
+                </div>
+                <span class="terminal-title">lalithk90@portfolio ~ %</span>
+            </div>
+            <div class="terminal-body">
+                <div class="loading-line">
+                    <span class="prompt">$</span>
+                    <span class="command">git</span>
+                    <span class="command">clone</span>
+                    <span class="argument">git@github.com:LalithK90/lalithk90.github.io.git</span>
+                </div>
+                <div class="status-line">Cloning into 'portfolio'...</div>
+                <div class="status-line">remote: Enumerating objects: 100%, done.</div>
+
+                <div class="loading-line mt-2">
+                    <span class="prompt">$</span>
+                    <span class="command">./gradlew</span>
+                    <span class="command">build</span>
+                    <span class="loading-dots"><span>.</span><span>.</span><span>.</span></span>
+                </div>
+                <div class="status-line">Building project 'lalithk90'...</div>
+                <div class="status-line">BUILD SUCCESSFUL</div>
+
+                <div class="loading-line mt-2">
+                    <span class="prompt">$</span>
+                    <span class="command">java</span>
+                    <span class="argument">-jar</span>
+                    <span class="argument">./build/libs/lalithk90.jar</span>
+                </div>
+                <div class="status-line startup">Starting Spring Boot Application...</div>
+                <div class="status-line startup">Tomcat started on port(s): 8080</div>
+                <div class="status-line success">Application ready!</div>
+
+                <div class="cursor-line">
+                    <span class="prompt">$</span>
+                    <span class="cursor"></span>
+                </div>
+            </div>
+        </div>
     </div>
     <!-- nav bar -->
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#heroSection" onclick="lenis.scrollTo('#heroSection')">
+            <a class="navbar-brand" href="#heroSection">
                 <span class="brand-initial">LK</span>
                 <span class="brand-name">Lalith Kahatapitiya</span>
             </a>
@@ -76,30 +106,29 @@
             <div class="collapse navbar-collapse" id="navbarContent">
                 <ul class="navbar-nav ms-auto align-items-center">
                     <li class="nav-item">
-                        <a class="nav-link active" onclick="lenis.scrollTo('#heroSection')" href="#heroSection">Home</a>
+                        <a class="nav-link active" href="#heroSection">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" onclick="lenis.scrollTo('#experience')" href="#experience">Experience</a>
+                        <a class="nav-link" href="#experience">Experience</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" onclick="lenis.scrollTo('#academic')" href="#academic">Education</a>
+                        <a class="nav-link" href="#academic">Education</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" onclick="lenis.scrollTo('#teaching')" href="#teaching">Teaching</a>
+                        <a class="nav-link" href="#teaching">Teaching</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" onclick="lenis.scrollTo('#projects')" href="#projects">Projects</a>
+                        <a class="nav-link" href="#projects">Projects</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" onclick="lenis.scrollTo('#opensource')" href="#opensource">Open
+                        <a class="nav-link" href="#opensource">Open
                             Source</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" onclick="lenis.scrollTo('#publications')"
-                            href="#publications">Publications</a>
+                        <a class="nav-link" href="#publications">Publications</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" onclick="lenis.scrollTo('#membership')" href="#membership">Memberships</a>
+                        <a class="nav-link" href="#membership">Memberships</a>
                     </li>
                     <li class="nav-item">
                         <button class="theme-toggle" id="themeToggle" title="Toggle dark/light mode">
@@ -117,7 +146,7 @@
             <!-- Interactive Header -->
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-sm-7 animate__animated animate__fadeInLeft animate__delay-2s">
+                    <div class="col-sm-7 animate__animated animate__fadeInLeft animate__delay-1s animate__slower">
                         <h1 id="h1" class="fst-italic animate__animated animate__fadeIn animate__delay-1s">
                             <span class="">Hello, it's me</span>
                             <br>
@@ -137,13 +166,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-5  animate__animated animate__fadeInRight animate__delay-2s" id="image_fit">
+                    <div class="col-sm-5  animate__animated animate__fadeInRight animate__delay-1s animate__slower"
+                        id="image_fit">
                         <img src="/asset/img/main_image.png" class="img-fluid rounded-5" id="main_image"
                             alt="Main image" />
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-sm-7  animate__animated animate__fadeInLeft animate__delay-2s">
+                    <div class="col-sm-7  animate__animated animate__fadeInLeft animate__delay-1s animate__slower">
                         <div class="row mt-1">
                             <div class="col-sm-12 text-center">
                                 <a href="/cv.html" target="_blank" class="btn btn-outline-light btn-lg me-3 cta-button">
@@ -156,7 +186,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-5  animate__animated animate__fadeInRight animate__delay-2s">
+                    <div class="col-sm-5  animate__animated animate__fadeInRight animate__delay-1s animate__slower">
                         <div class="row pt-sm-2 mt-sm-2 justify-content-center">
                             <!-- linkedin -->
                             <div class="col-1 p-2 mx-2 animate__animated animate__fadeIn animate__delay-1s">
@@ -204,9 +234,8 @@
             <div class="container-fluid mt-5 pt-4" id="experience">
                 <!-- header -->
                 <div class="row mb-4">
-                    <div class="col-12">
-                        <h2
-                            class="text-white text-left animate__animated animate__lightSpeedInRight animate__delay-1s animate__slower">
+                    <div class="col-12" data-aos="zoom-in-right">
+                        <h2 class="text-white text-left">
                             Professional Journey
                         </h2>
                         <p class="text-white-50">Combining healthcare expertise with software engineering skills</p>
@@ -217,7 +246,7 @@
                     <!-- Left Column -->
                     <div class="col-md-6">
                         <!-- Siam University - Current Position -->
-                        <div class="entry m-2 p-3 hoverBackgroundEntry">
+                        <div class="entry m-2 p-3 hoverBackgroundEntry" data-aos="fade-up-right">
                             <div class="d-flex align-items-center mb-3">
                                 <img src="/asset/img/saim_university.png" class="imge_ me-3"
                                     alt="Siam University Thailand logo" loading="lazy" />
@@ -244,7 +273,7 @@
                             </div>
                         </div>
                         <!-- SLIATE - Past Position -->
-                        <div class="entry m-2 p-3 hoverBackgroundEntry">
+                        <div class="entry m-2 p-3 hoverBackgroundEntry" data-aos="fade-up-right">
                             <div class="d-flex align-items-center mb-3">
                                 <img src="/asset/img/sltate_logo.jpg" class="imge_ me-3" alt="SLIATE Anuradhapura logo"
                                     loading="lazy" />
@@ -289,7 +318,7 @@
                     <!-- Right Column -->
                     <div class="col-md-6">
                         <!-- Asiri Hospital -->
-                        <div class="entry m-2 p-3 hoverBackgroundEntry">
+                        <div class="entry m-2 p-3 hoverBackgroundEntry" data-aos="fade-up-left">
                             <div class="d-flex align-items-center mb-3">
                                 <img src="/asset/img/asirihospital.png" class="imge_ me-3"
                                     alt="Asiri Hospital Kandy logo" loading="lazy">
@@ -331,7 +360,7 @@
                             </div>
                         </div>
                         <!-- Developers-in -->
-                        <div class="entry m-2 p-3 hoverBackgroundEntry">
+                        <div class="entry m-2 p-3 hoverBackgroundEntry" data-aos="fade-up-left">
                             <div class="d-flex align-items-center mb-3">
                                 <img src="/asset/img/developers-in.png" class="imge_ me-3"
                                     alt="Developers-in company logo" loading="lazy">
@@ -564,9 +593,8 @@
             <!-- academic  -->
             <div class="container-fluid mt-2" id="academic">
                 <div class="row mb-4">
-                    <div class="col-12">
-                        <h2
-                            class="text-white text-left animate__animated animate__lightSpeedInRight animate__delay-1s animate__slower">
+                    <div class="col-12" data-aos="zoom-in-right">
+                        <h2 class="text-white text-left">
                             Education
                         </h2>
                         <p class="text-white-50">Academic qualifications in technology and healthcare</p>
@@ -578,7 +606,7 @@
                     <!-- Left Column -->
                     <div class="col-md-6">
                         <!-- Master of Computer Science -->
-                        <div class="entry m-2 p-3 hoverBackgroundEntry">
+                        <div class="entry m-2 p-3 hoverBackgroundEntry" data-aos="fade-up-right">
                             <div class="d-flex align-items-center mb-3">
                                 <img src="/asset/img/uop.jpeg" class="imge_ me-3" alt="University of Peradeniya logo"
                                     loading="lazy">
@@ -599,7 +627,7 @@
                         </div>
 
                         <!-- Bachelor of Information Technology -->
-                        <div class="entry m-2 p-3 hoverBackgroundEntry">
+                        <div class="entry m-2 p-3 hoverBackgroundEntry" data-aos="fade-up-right">
                             <div class="d-flex align-items-center mb-3">
                                 <img src="/asset/img/uob.png" class="imge_ me-3"
                                     alt="University of Colombo School of Computing logo" loading="lazy">
@@ -618,7 +646,7 @@
                         </div>
 
                         <!-- Higher Diploma in Diagnostic Radiography -->
-                        <div class="entry m-2 p-3 hoverBackgroundEntry">
+                        <div class="entry m-2 p-3 hoverBackgroundEntry" data-aos="fade-up-right">
                             <div class="d-flex align-items-center mb-3">
                                 <img src="/asset/img/SLSR.png" class="imge_ me-3"
                                     alt="Sri Lanka School of Radiography logo" loading="lazy">
@@ -639,7 +667,7 @@
                     <!-- Right Column -->
                     <div class="col-md-6">
                         <!-- Diploma in Business Management -->
-                        <div class="entry m-2 p-3 hoverBackgroundEntry">
+                        <div class="entry m-2 p-3 hoverBackgroundEntry" data-aos="fade-up-left">
                             <div class="d-flex align-items-center mb-3">
                                 <img src="/asset/img/esoft.png" class="imge_ me-3" alt="ESOFT Metro Campus logo"
                                     loading="lazy">
@@ -658,7 +686,7 @@
                         </div>
 
                         <!-- Foundation of Human Resource Management -->
-                        <div class="entry m-2 p-3 hoverBackgroundEntry">
+                        <div class="entry m-2 p-3 hoverBackgroundEntry" data-aos="fade-up-left">
                             <div class="d-flex align-items-center mb-3">
                                 <img src="/asset/img/cipm.png" class="imge_ me-3"
                                     alt="Chartered Institute of Personnel Management logo" loading="lazy">
@@ -746,9 +774,8 @@
             <!-- Teaching Experience Section -->
             <div class="container-fluid mt-5 pt-5" id="teaching">
                 <div class="row mb-4">
-                    <div class="col-12">
-                        <h2
-                            class="text-white text-left animate__animated animate__lightSpeedInRight animate__delay-1s animate__slower">
+                    <div class="col-12" data-aos="zoom-in-right">
+                        <h2 class="text-white text-left">
                             Teaching Experience
                         </h2>
                         <p class="text-white-50">Dedicated to fostering the next generation of software engineers and IT
@@ -757,7 +784,7 @@
                 </div>
 
                 <!-- Teaching Philosophy -->
-                <div class="entry m-2 p-3 hoverBackgroundEntry">
+                <div class="entry m-2 p-3 hoverBackgroundEntry" data-aos="fade-up-right">
                     <div class="d-flex align-items-center mb-3">
                         <i class="fa-solid fa-chalkboard-user fa-3x text-white me-3"></i>
                         <div>
@@ -783,7 +810,7 @@
                 </div>
 
                 <!-- Course Development -->
-                <div class="entry m-2 p-3 hoverBackgroundEntry">
+                <div class="entry m-2 p-3 hoverBackgroundEntry" data-aos="fade-up-right">
                     <div class="d-flex align-items-center mb-3">
                         <i class="fa-solid fa-book-open fa-3x text-white me-3"></i>
                         <div>
@@ -825,9 +852,8 @@
             <!-- publications -->
             <div class="container-fluid mt-5 pt-5" id="publications">
                 <div class="row mb-4">
-                    <div class="col-12">
-                        <h2
-                            class="text-white text-left animate__animated animate__lightSpeedInRight animate__delay-1s animate__slower">
+                    <div class="col-12" data-aos="zoom-in-right">
+                        <h2 class="text-white text-left">
                             Publications & Research
                         </h2>
                         <p class="text-white-50">Academic contributions and research interests in software
@@ -846,7 +872,7 @@
                                     <h3 class="text-white mb-0">Research Interests</h3>
                                 </div>
                             </div>
-                            <div class="job-content">
+                            <div class="job-content" data-aos="flip-down">
                                 <div class="row">
                                     <div class="col-md-4">
                                         <h5 class="text-white">Medical Image Analysis</h5>
@@ -890,7 +916,8 @@
                     </div>
                     <div class="job-content">
                         <div class="row text-center">
-                            <div class="col-md-4 mb-3">
+                            <div class="col-md-4 mb-3" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+                                data-aos-duration="2000">
                                 <a href="https://scholar.google.com/citations?user=ojetDLIAAAAJ&hl=en"
                                     class="text-white-50 text-decoration-none">
                                     <img src="./asset/img/google-scholar.svg" class="imge_ mb-2"
@@ -898,7 +925,8 @@
                                     <h5 class="text-white">Google Scholar</h5>
                                 </a>
                             </div>
-                            <div class="col-md-4 mb-3">
+                            <div class="col-md-4 mb-3" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+                                data-aos-duration="2000">
                                 <a href="https://www.researchgate.net/profile/Lalith-Kahatapitiya"
                                     class="text-white-50 text-decoration-none">
                                     <img src="./asset/img/researchget.png" class="imge_ mb-2" alt="ResearchGate profile"
@@ -906,7 +934,8 @@
                                     <h5 class="text-white">ResearchGate</h5>
                                 </a>
                             </div>
-                            <div class="col-md-4 mb-3">
+                            <div class="col-md-4 mb-3" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+                                data-aos-duration="2000">
                                 <a href="https://pgis.academia.edu/LalithKahatapitiya"
                                     class="text-white-50 text-decoration-none">
                                     <img src="./asset/img/academia-edu.png" class="imge_ mb-2"
@@ -914,7 +943,8 @@
                                     <h5 class="text-white">Academia</h5>
                                 </a>
                             </div>
-                            <div class="col-md-4 mb-3">
+                            <div class="col-md-4 mb-3" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+                                data-aos-duration="2000">
                                 <a href="https://orcid.org/0009-0007-3364-7811"
                                     class="text-white-50 text-decoration-none">
                                     <img src="./asset/img/orcid.png" class="imge_ mb-2"
@@ -922,7 +952,8 @@
                                     <h5 class="text-white">ORCID</h5>
                                 </a>
                             </div>
-                            <div class="col-md-4 mb-3">
+                            <div class="col-md-4 mb-3" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+                                data-aos-duration="2000">
                                 <a href="https://osf.io/xzdms" class="text-white-50 text-decoration-none">
                                     <img src="./asset/img/osf.png" class="imge_ mb-2"
                                         alt="Open Science Framework profile" loading="lazy">
@@ -937,16 +968,16 @@
             <!-- membership -->
             <div class="container-fluid mt-5 pt-5" id="membership">
                 <div class="row mb-4">
-                    <div class="col-12">
-                        <h2
-                            class="text-white text-left animate__animated animate__lightSpeedInRight animate__delay-1s animate__slower">
+                    <div class="col-12" data-aos="zoom-in-right">
+                        <h2 class="text-white text-left">
                             Membership & Licenses
                         </h2>
                         <p class="text-white-50">Professional affiliations and certifications</p>
                     </div>
                 </div>
                 <div class="entry m-2 p-4 row">
-                    <div class="col-sm-4 p-2 hoverBackgroundEntry">
+                    <div class="col-sm-4 p-2 hoverBackgroundEntry" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+                        data-aos-duration="2000">
                         <div class="row">
                             <div class="col-sm-7">
                                 <h5 class="text-white text-center">Computer Society of Sri Lanka</h5>
@@ -963,7 +994,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-4 p-2 hoverBackgroundEntry">
+                    <div class="col-sm-4 p-2 hoverBackgroundEntry" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+                        data-aos-duration="2000">
                         <div class="row">
                             <div class="col-sm-7">
                                 <h5 class="text-white">Sri Lanka Medical Council</h5>
@@ -980,7 +1012,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-4 p-2 hoverBackgroundEntry">
+                    <div class="col-sm-4 p-2 hoverBackgroundEntry" data-aos="flip-left" data-aos-easing="ease-out-cubic"
+                        data-aos-duration="2000">
                         <div class="row">
                             <div class="col-sm-7">
                                 <h5 class="text-white text-center">Society of Radiological Technologist</h5>
@@ -1003,9 +1036,8 @@
             <!-- projects -->
             <div class="container-fluid mt-5 pt-5" id="projects">
                 <div class="row mb-4">
-                    <div class="col-12">
-                        <h2
-                            class="text-white text-left animate__animated animate__lightSpeedInRight animate__delay-1s animate__slower">
+                    <div class="col-12" data-aos="zoom-in-right">
+                        <h2 class="text-white text-left">
                             Featured Projects
                         </h2>
                         <p class="text-white-50">Innovative applications with educational and research applications
@@ -1014,7 +1046,7 @@
                 </div>
                 <div class="entry m-2 p-4 row">
                     <!-- LITI Project -->
-                    <div class="entry__meta p-4 col-sm-6 hoverBackgroundEntry">
+                    <div class="entry__meta p-4 col-sm-6 hoverBackgroundEntry" data-aos="fade-up-right">
                         <div class="row">
                             <div class="col-sm-9">
                                 <h3 class="text-white">LITI - URL Shortener</h3>
@@ -1058,7 +1090,7 @@
                     </div>
 
                     <!-- BrainBoost Project -->
-                    <div class="entry__media p-4 col-sm-6 hoverBackgroundEntry">
+                    <div class="entry__media p-4 col-sm-6 hoverBackgroundEntry" data-aos="fade-up-left">
                         <div class="row">
                             <div class="col-sm-9">
                                 <h3 class="text-white">BrainBoost - MCQ Learning Platform</h3>
@@ -1106,16 +1138,15 @@
             <!-- open source -->
             <div class="container-fluid mt-2" id="opensource">
                 <div class="row mb-4">
-                    <div class="col-12">
-                        <h2
-                            class="text-white text-left animate__animated animate__lightSpeedInRight animate__delay-1s animate__slower">
+                    <div class="col-12" data-aos="zoom-in-right">
+                        <h2 class="text-white text-left">
                             Open Source Contribution
                         </h2>
                         <p class="text-white-50">Software tools and extensions developed for the community</p>
                     </div>
                 </div>
                 <div class="entry m-2 p-4 row">
-                    <div class="entry__meta p-4 col-sm-2 hoverBackgroundEntry">
+                    <div class="entry__meta p-4 col-sm-2">
                         <div class="row">
                             <div class="col-sm-12">
                                 <h3 class="text-white">Vs Code
@@ -1125,7 +1156,8 @@
                     </div>
                     <div class="entry__media p-4 col-sm-9">
                         <div class="row">
-                            <div class="col-sm-3  hoverBackgroundEntry">
+                            <div class="col-sm-3  hoverBackgroundEntry" data-aos="flip-left"
+                                data-aos-easing="ease-out-cubic" data-aos-duration="2000">
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <img src="./asset/img/vscode.png" class="imge_" alt="Visual Studio Code logo"
@@ -1140,7 +1172,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-3  hoverBackgroundEntry">
+                            <div class="col-sm-3  hoverBackgroundEntry" data-aos="flip-left"
+                                data-aos-easing="ease-out-cubic" data-aos-duration="2000">
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <img src="./asset/img/vsc.png" alt="VS Code Marketplace extensions"
@@ -1163,9 +1196,8 @@
             <!-- Contact Form Section -->
             <div class="container-fluid mt-5 pt-5" id="contact">
                 <div class="row mb-4">
-                    <div class="col-12 text-center">
-                        <h2
-                            class="text-white text-left animate__animated animate__lightSpeedInRight animate__delay-1s animate__slower">
+                    <div class="col-12 text-center" data-aos="flip-down">
+                        <h2 class="text-white text-left">
                             Get In Touch
                         </h2>
                         <p class="text-white-50">Have a project in mind or want to collaborate? Tap the button
@@ -1235,6 +1267,36 @@
         </div>
     </div>
 
+    <!-- Scripts organized by priority at end of body -->
+    <!-- Priority 1: jQuery (base dependency for everything) -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
+
+    <!-- Priority 2: AOS (scroll animation) -->
+    <script src="https://unpkg.com/aos@next/dist/aos.umd.js"></script>
+
+    <!-- Priority 3: Popper.js (required by Bootstrap) -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+
+    <!-- Priority 4: Bootstrap (UI framework) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Priority 5: Font Awesome (icons) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
+
+    <!-- Priority 6: GSAP (animation library) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+
+    <!-- Priority 7: GSAP TextPlugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/TextPlugin.min.js"></script>
+
+    <!-- Priority 8: GSAP ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Priority 9: Helper functions -->
+    <script src="/asset/js/plugins.js"></script>
+
+    <!-- Priority 10: Main application code (minified) -->
+    <script src="/asset/js/myJs.min.js"></script>
 
 </body>
 
