@@ -2,8 +2,12 @@
 const loaderContainer = document.querySelector('.loader-container');
 const pageContent = document.querySelector('#page-content');
 window.addEventListener('load', () => {
-    loaderContainer.classList.add('hidden');
-    pageContent.classList.add('visible');
+    if (loaderContainer) {
+        loaderContainer.classList.add('hidden');
+    }
+    if (pageContent) {
+        pageContent.classList.add('visible');
+    }
 });
 let currentYear = new Date();
 let fullYear = currentYear.getFullYear();
@@ -130,14 +134,47 @@ if (dropdownToggle && dropdownSection) {
 document.addEventListener('DOMContentLoaded', () => {
     const themeToggle = document.getElementById('themeToggle');
     const htmlElement = document.documentElement;
+    const mainImage = document.getElementById('main_image');
+    const typewriter = document.getElementById('typewriter');
+    const cursor = document.getElementById('cursor');
+    const h1Element = document.getElementById('h1');
+    const firstSpan = h1Element ? h1Element.querySelector('span:first-child') : null;
+
+    // Function to update main image based on theme
+    function updateMainImage (theme) {
+        if (mainImage) {
+            if (theme === 'light') {
+                mainImage.src = '/asset/img/main_image_l.png';
+            } else {
+                mainImage.src = '/asset/img/main_image.png';
+            }
+        }
+    }
+
+    // Function to update typewriter, cursor and first span colors based on theme
+    function updateTypewriterColor (theme) {
+        if (typewriter) {
+            typewriter.style.color = '#F2B279';
+        }
+        if (cursor) {
+            cursor.style.color = '#F2B279';
+        }
+        if (firstSpan) {
+            firstSpan.style.color = '#F2B279';
+        }
+    }
 
     // Load saved theme from localStorage
     const savedTheme = localStorage.getItem('theme') || 'dark';
     if (savedTheme === 'light') {
         htmlElement.classList.add('light-theme');
         themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        updateMainImage('light');
+        updateTypewriterColor('light');
     } else {
         themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        updateMainImage('dark');
+        updateTypewriterColor('dark');
     }
 
     // Toggle theme on button click
@@ -146,10 +183,14 @@ document.addEventListener('DOMContentLoaded', () => {
             htmlElement.classList.remove('light-theme');
             localStorage.setItem('theme', 'dark');
             themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+            updateMainImage('dark');
+            updateTypewriterColor('dark');
         } else {
             htmlElement.classList.add('light-theme');
             localStorage.setItem('theme', 'light');
             themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+            updateMainImage('light');
+            updateTypewriterColor('light');
         }
     });
 });

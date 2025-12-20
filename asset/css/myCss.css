@@ -504,6 +504,19 @@ nav .nav-link.active::after {
   color: var(--secondary);
 }
 
+#typewriter {
+  color: var(--secondary);
+}
+
+#cursor {
+  color: var(--secondary);
+}
+
+/* Light theme overrides */
+.light-theme #h1 span.text-white {
+  color: #0B0036 !important;
+}
+
 /* Light theme hero background */
 .light-theme #heroSection {
   background: linear-gradient(135deg, #fdf7f1 0%, #f5f0ff 50%, #eef3ff 100%);
@@ -564,11 +577,27 @@ nav .nav-link.active::after {
   border-radius: 50%;
   box-shadow: rgba(249, 246, 246, 0.25) 0px 25px 50px -12px;
   transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .magneto:hover {
-  transform: scale(1.15);
-  box-shadow: rgba(100, 15, 192, 0.25) 0px 25px 50px -12px;
+  transform: scale(1.2) translateY(-5px);
+  box-shadow: rgba(242, 178, 121, 0.4) 0px 25px 50px -12px;
+  color: #F2B279;
+}
+
+.magneto:active {
+  transform: scale(1.1) translateY(-2px);
+}
+
+/* Light theme magneto icon styles */
+.light-theme .magneto {
+  color: #0B0036;
+}
+
+.light-theme .magneto:hover {
+  color: #F2B279;
+  box-shadow: rgba(242, 178, 121, 0.5) 0px 25px 50px -12px;
 }
 
 .tech_img {
