@@ -194,7 +194,8 @@ $(function () {
         $firstSpan.css('color', color);
     }
 
-    const savedTheme = localStorage.getItem('theme') || 'dark';
+    const systemTheme = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+    const savedTheme = localStorage.getItem('theme') || systemTheme;
     if (savedTheme === 'light') {
         $html.addClass('light-theme');
         $themeToggle.html('<i class="fas fa-sun"></i>');
