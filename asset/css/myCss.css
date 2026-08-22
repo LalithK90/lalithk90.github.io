@@ -1073,6 +1073,41 @@ nav .nav-link.active::after {
   padding: 1rem;
 }
 
+.projects-scroll {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1.75rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x proximity;
+  padding: 0.5rem 0.5rem 1.5rem;
+}
+
+.projects-scroll .project-card {
+  flex: 0 0 auto;
+  width: 320px;
+  scroll-snap-align: start;
+}
+
+.projects-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+
+.projects-scroll::-webkit-scrollbar-track {
+  background: rgba(242, 178, 121, 0.1);
+}
+
+.projects-scroll::-webkit-scrollbar-thumb {
+  background: rgba(242, 178, 121, 0.4);
+  border-radius: 4px;
+}
+
+@media (min-width: 576px) {
+  .projects-scroll .project-card {
+    width: 340px;
+  }
+}
+
 .fs_center {
   text-align: center;
   color: var(--white);
